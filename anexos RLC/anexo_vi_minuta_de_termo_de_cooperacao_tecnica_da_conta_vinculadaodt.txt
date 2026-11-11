@@ -1,0 +1,209 @@
+MINUTA DE TERMO DE COOPERAÇÃO TÉCNICA DA CONTA VINCULADA
+TERMO DE COOPERAÇÃO TÉCNICA N.º /
+TERMO DE COOPERAÇÃO TÉCNICA QUE, ENTRE SI, CELEBRAM A COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) E A INSTITUIÇÃO FINANCEIRA , VISANDO A OPERACIONALIZAÇÃO DA RETENÇÃO DE PROVISÕES DE ENCARGOS TRABALHISTAS, PREVIDENCIÁRIOS E OUTROS A SEREM PAGOS.
+A COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), estabelecido(a) _______________ (endereço completo), inscrito(a) no CNPJ/MF sob o nº ________/___ -__, por meio da Coordenação ______, consoante delegação de competência conferida pela Portaria nº ______, de ___/___/_____, (data) publicada no DOU de ____/____/______, (data) neste ato, representado(a) pelo(a) _______________ (cargo), Senhor(a) _________________, portador(a) da Carteira de Identidade nº ____________, expedida pela _____________, e inscrito no CPF sob Nº XXX.XXX.XXX-XX, nomeado(a) pela Portaria nº _________, de ____/___/_____ (data), publicada no DOU de ____/___/_____ (data), doravante denominado(a) ADMINISTRAÇÃO, e, de outro lado, a INSTITUIÇÃO FINANCEIRA,, estabelecido(a) , inscrito(a) no CNPJ/MF sob o nº _____________, daqui por diante denominado(a) INSTITUIÇÃO FINANCEIRA, neste ato, representado(a) pelo seu _______________ (cargo), Senhor(a) ______________, portador(a) da Carteira de Identidade nº ___________, expedida pela __________, e inscrito no CPF sob nº XXX.XXX.XXX-XX, têm justo e acordado o presente TERMO DE COOPERAÇÃO TÉCNICA, para o estabelecimento de critérios e procedimentos para abertura automatizada de contas bancárias específicas destinadas a abrigar os recursos retidos de rubricas constantes da planilha de custos e formação de preços de contratos firmados pelo órgão ou entidade ora mencionado, mediante as condições previstas nas seguintes cláusulas:
+CLÁUSULA PRIMEIRA
+DAS DEFINIÇÕES
+Para efeito deste Termo de Cooperação Técnica entende-se por:
+CLT – Consolidação das Leis do Trabalho.
+Prestador de Serviços – pessoa física ou jurídica que possui Contrato firmado com a COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+Rubricas – itens que compõem a planilha de custos e de formação de preços de contratos firmados pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+Conta-Depósito Vinculada – bloqueada para movimentação – cadastro em nome do Prestador dos Serviços de cada contrato firmado pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), a ser utilizada exclusivamente para crédito das rubricas retidas.
+Usuário(s) – servidor(es) da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) e por ela formalmente indicado(s), com conhecimento das chaves e senhas para acesso aos aplicativos instalados nos sistemas de autoatendimento da INSTITUIÇÃO FINANCEIRA.
+Partícipes – referência à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) e à Instituição Financeira.
+CLÁUSULA SEGUNDA
+DO OBJETO
+O presente instrumento tem por objetivo regulamentar o estabelecimento, pela INSTITUIÇÃO FINANCEIRA, dos critérios para abertura de Contas-Depósitos específicas destinadas a abrigar os recursos retidos de rubricas constantes da planilha de custos e formação de preços dos contratos firmados pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), bem como viabilizar o acesso da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) aos saldos e extratos das contas abertas.
+Para cada Contrato será aberta uma Conta-Depósito Vinculada – bloqueada para movimentação em nome do Prestador de Serviços do Contrato.
+A conta será exclusivamente aberta para recebimento de depósitos dos recursos retidos de rubricas constantes da planilha de custos e de formação de preços dos contratos firmados pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), pagos ao Prestador de Serviços dos Contratos e será denominada Conta-Depósito Vinculada – bloqueada para movimentação.
+A movimentação dos recursos na Conta-Depósito Vinculada – bloqueada para movimentação será providenciada exclusivamente à ordem da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+CLÁUSULA TERCEIRA
+DO FLUXO OPERACIONAL
+O cadastramento, captação e movimentação dos recursos dar-se-ão conforme o fluxo operacional a seguir:
+A COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) firma o Contrato com o Prestador dos Serviços.
+A COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) envia à INSTITUIÇÃO FINANCEIRA arquivo em meio magnético, em modelo específico previamente acordado entre a COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) e a INSTITUIÇÃO FINANCEIRA, para abertura de Conta-Depósito Vinculada – bloqueada para movimentação – em nome do Prestador de Serviços que tiver contrato firmado ou envia Ofício à INSTITUIÇÃO FINANCEIRA, solicitando a abertura de Conta-Depósito Vinculada – bloqueada para movimentação em nome do Prestador de Serviços.
+A INSTITUIÇÃO FINANCEIRA recebe arquivo transmitido pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) e abre Conta-Depósito Vinculada – bloqueada para movimentação, em nome do Prestador dos Serviços para todos os registros dos arquivos válidos, nas agências da INSTITUIÇÃO FINANCEIRA no território nacional ou a INSTITUIÇÃO FINANCEIRA recebe Ofício da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) e, após a entrega, pelo Prestador de Serviços, dos documentos necessários, procede à abertura da Conta-Depósito Vinculada – bloqueada para movimentação em nome do Prestador de Serviços.
+A INSTITUIÇÃO FINANCEIRA envia à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) arquivo retorno em modelo específico previamente acordado entre os Partícipes, contendo o cadastramento da Conta-Depósito Vinculada ― bloqueada para movimentação aberta em nome do Prestador dos Serviços, bem como as eventuais rejeições, indicando seus motivos ou envia Ofício à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), contendo o número da Conta-Depósito vinculada – bloqueada para movimentação em nome do Prestador de Serviços.
+A INSTITUIÇÃO FINANCEIRA recebe o ofício da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) e efetua cadastro no seu sistema eletrônico.
+A COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) credita mensalmente recursos retidos da planilha de custos e de formação de preços do contrato firmado pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) na Conta-Depósito Vinculada – bloqueada para movimentação, mantida exclusivamente nas agências da INSTITUIÇÃO FINANCEIRA, mediante emissão de Ordem Bancária, na forma estabelecida pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) e pela INSTITUIÇÃO FINANCEIRA.
+A COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) solicita à INSTITUIÇÃO FINANCEIRA a movimentação dos recursos, na forma do Anexo IV do presente Instrumento.
+A INSTITUIÇÃO FINANCEIRA acata solicitação de movimentação financeira na Conta-Depósito Vinculada – bloqueada para movimentação efetuada pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), confirmando, por meio de Ofício, nos moldes indicados no Anexo V deste Instrumento, caso a movimentação não tenha sido efetuada pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) via meio eletrônico.
+A INSTITUIÇÃO FINANCEIRA disponibiliza à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) aplicativo, via internet, para consulta de saldos e extratos e para movimentação, se for o caso, da Conta-Depósito Vinculada – bloqueada para movimentação, após autorização expressa da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), para recebimento de chave e senhas de acesso a sistema eletrônico.
+O fluxo operacional se dará nos seguintes termos:
+O acesso da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) às Contas-Depósitos Vinculadas – bloqueadas para movimentação fica condicionado à expressa autorização, formalizada em caráter irrevogável e irretratável, nos termos do Anexo VI deste Instrumento, pelos Proponentes, titulares das contas, quando do processo de entrega da documentação junto à agência da INSTITUIÇÃO FINANCEIRA;
+Os recursos depositados nas Contas-Depósitos Vinculadas – bloqueadas para movimentação serão remunerados conforme índice de correção da poupança pro rata die; e
+Eventual alteração da forma de correção da poupança prevista no subitem 9.1.2 deste Instrumento implicará a revisão deste Termo de Cooperação Técnica.
+CLÁUSULA QUARTA
+DAS COMPETÊNCIAS E RESPONSABILIDADES
+À COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) compete:
+Assinar o Termo de Adesão ao Regulamento da INSTITUIÇÃO FINANCEIRA, onde está estabelecido o vínculo jurídico com a INSTITUIÇÃO FINANCEIRA, para amparar a utilização de qualquer aplicativo;
+Designar, por meio de Ofício, conforme Anexo VII do presente Instrumento, até, no máximo, 4 (quatro) servidores para os quais a INSTITUIÇÃO FINANCEIRA disponibilizará chaves e senhas de acesso ao autoatendimento à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), com poderes somente para consultas aos saldos e aos extratos das Contas-Depósitos Vinculadas – bloqueadas para movimentação;
+Remeter à INSTITUIÇÃO FINANCEIRA arquivos em modelo específico, acordado entre os Partícipes, solicitando o cadastramento das Contas-Depósitos Vinculadas – bloqueadas para movimentação ou remeter à INSTITUIÇÃO FINANCEIRA Ofício, solicitando a abertura das Contas-Depósitos Vinculadas – bloqueadas para movimentação;
+Remeter Ofícios à Agência da INSTITUIÇÃO FINANCEIRA, solicitando a movimentação de recursos das Contas-Depósitos Vinculadas – bloqueadas para movimentação ou movimentá-los por meio eletrônico;
+Comunicar ao Prestador de Serviços, na forma do Anexo VIII do presente Instrumento, o cadastramento das Contas-Depósitos Vinculadas – bloqueadas para movimentação, orientando-os a comparecer à Agência da INSTITUIÇÃO FINANCEIRA, para providenciar a regularização, entrega de documentos e assinatura da autorização, em caráter irrevogável e irretratável, nos termos do Anexo VI deste instrumento, para que a COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) possa ter acesso aos saldos e aos extratos da Conta-Depósito Vinculada – bloqueada para movimentação, bem como solicitar movimentações financeiras;
+Prover os ajustes técnicos de tecnologia da informação para possibilitar o acesso aos sistemas de autoatendimento, por intermédio do qual será viabilizado o acesso aos saldos e aos extratos das Contas-Depósitos Vinculadas – bloqueadas para movimentação;
+Adequar-se a eventuais alterações nos serviços oferecidos pela INSTITUIÇÃO FINANCEIRA;
+Instruir os usuários sobre forma de acesso às transações dos sistemas de autoatendimento da INSTITUIÇÃO FINANCEIRA;
+Manter rígido controle de segurança das senhas de acesso aos sistemas de autoatendimento da INSTITUIÇÃO FINANCEIRA;
+Assumir como de sua inteira responsabilidade os prejuízos que decorrerem do mau uso ou da quebra de sigilo das senhas dos servidores devidamente cadastrados nos sistemas de autoatendimento, conforme item 2 desta cláusula, cuidando de substituí-las, imediatamente, caso suspeite de que tenham se tornado de conhecimento de terceiros não autorizados;
+Responsabilizar-se por prejuízos decorrentes de transações não concluídas em razão de falha de seu equipamento e/ou erros de processamento devido da inexistência de informação ou de fornecimento incompleto de informações;
+Comunicar tempestivamente à INSTITUIÇÃO FINANCEIRA qualquer anormalidade detectada que possa comprometer o perfeito funcionamento da conexão aos sistemas de autoatendimento, em especial, no que concerne à segurança das informações;
+Permitir, a qualquer tempo, que técnicos da INSTITUIÇÃO FINANCEIRA possam vistoriar o hardware e software utilizados para conexão aos sistemas de autoatendimento; e
+Não divulgar quaisquer informações contidas nas transações efetuadas nos sistemas de autoatendimento colocados à sua disposição, de modo a manter o sigilo bancário, a privacidade em face de servidores, e outras pessoas integrantes da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) que não sejam usuários, e as normas de segurança da informação da INSTITUIÇÃO FINANCEIRA.
+CLÁUSULA QUINTA
+DAS COMPETÊNCIAS E RESPONSABILIDADES DA INSTITUIÇÃO FINANCEIRA
+À INSTITUIÇÃO FINANCEIRA compete:
+Disponibilizar os sistemas de autoatendimento à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB);
+Gerar e fornecer até 4 (quatro) chaves e senhas iniciais de acesso, para utilização na primeira conexão aos sistemas de autoatendimento, oportunidade na qual as senhas serão obrigatoriamente substituídas pelos respectivos detentores das chaves, por outra de conhecimento exclusivo do usuário;
+Informar à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) quaisquer alterações nos serviços oferecidos pela INSTITUIÇÃO FINANCEIRA, por intermédio dos sistemas de autoatendimento ou via Ofício;
+Prestar o apoio técnico que se fizer necessário à manutenção do serviço, objeto deste Instrumento, e ao cadastramento de Contas-Depósitos Vinculadas – bloqueadas para movimentação;
+Gerar e encaminhar, via sistema de autoatendimento, os arquivos retorno do resultado do cadastramento das Contas-Depósitos Vinculadas – bloqueadas para movimentação ou encaminhar Ofício, contendo o número da conta aberta em nome do Prestador dos Serviços;
+Orientar sua rede de agências quanto aos procedimentos operacionais específicos objeto deste Instrumento; e
+Informar à COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) os procedimentos adotados, em atenção aos Ofícios recebidos.
+CLÁUSULA SEXTA
+DOS RECURSOS FINANCEIROS E MATERIAIS
+Este Termo de Cooperação Técnica não implica desembolso, a qualquer título, presente ou futuro, sendo vedada a transferência de recursos financeiros entre os Partícipes.
+CLÁUSULA SÉTIMA
+DA VIGÊNCIA
+O presente Termo de Cooperação Técnica poderá ter sua vigência limitada a até 60 (sessenta) meses, a contar da data de sua assinatura.
+CLÁUSULA OITAVA
+DA PUBLICAÇÃO
+A publicação de extrato do presente Instrumento no Diário Oficial da União será providenciada pela COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) até o 5º (quinto) dia útil do mês subsequente à data de sua assinatura, para ocorrer no prazo de 20 (vinte) dias a partir daquela data.
+CLÁUSULA NONA
+DAS ALTERAÇÕES
+Sempre que necessário, as cláusulas deste Termo de Cooperação Técnica, à exceção da que trata do objeto, poderão ser aditadas, modificadas ou suprimidas, mediante Termo Aditivo, celebrado entre os Partícipes, passando esses termos a fazer parte integrante deste Instrumento como um todo, único e indivisível.
+CLÁUSULA DÉCIMA
+DA RESCISÃO
+Este Termo de Cooperação Técnica poderá ser denunciado por qualquer dos Partícipes em razão do descumprimento de qualquer das obrigações ou condições nele pactuadas, bem assim pela superveniência de norma legal ou fato administrativo que o torne formal ou materialmente inexequível ou, ainda, por ato unilateral, mediante comunicação prévia da parte que dele se desinteressar, com antecedência mínima de 90 (noventa) dias, ficando os Partícipes responsáveis pelas obrigações anteriormente assumidas.
+CLÁUSULA DÉCIMA PRIMEIRA
+DO FORO
+Os casos omissos e/ou situações contraditórias deste Termo de Cooperação Técnica deverão ser resolvidos mediante conciliação entre os Partícipes, com prévia comunicação por escrito da ocorrência, consignando prazo para resposta, e todos aqueles que não puderem ser resolvidos dessa forma serão dirimidos pela Justiça Federal, na Seção Judiciária de .
+E por estarem justos e de acordo, os Partícipes firmam o presente instrumento em 2 (duas) vias de igual teor e forma, perante as testemunhas que também o subscrevem, para que produza os legítimos efeitos de direito.
+(Local e data)
+--- TABELA ---
+Assinatura do representante da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) | Assinatura do representante da INSTITUIÇÃO FINANCEIRA
+--- FIM TABELA ---
+TESTEMUNHAS:
+Nome:Nome:
+CPF:CPF:
+ANEXO A DO ANEXO VI
+Ofício Nº _____/_____
+____________, ____ de ________ de 20__.
+A(o) Senhor(a) Gerente
+(nome do gerente)
+(Endereço com CEP)
+Senhor(a) Gerente,
+Reporto-me ao Termo de Cooperação Técnica Nº xx/2xxx, firmado com essa instituição, para solicitar que promova o cadastramento de Evento, destinado a receber recursos retidos de rubricas constantes na planilha de custos e formação de preços do Contrato Nº 038/2012, firmado por a COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) com o prestador de serviço abaixo especificado:
+CNPJ:
+Razão Social:
+Nome Personalizado:
+Endereço:
+Representante Legal:
+CPF do Representante Legal:
+Atenciosamente,
+_____________________________________________________________
+Assinatura do Ordenador de despesas da COMPANHIA NACIONAL DE
+ABASTECIMENTO (CONAB) ou do empregado previamente designado pelo Ordenador
+ANEXO B DO ANEXO VI
+Ofício Nº _____/_____
+___________, ___ de _______ de 20__.
+Senhor __________________________________________,
+(nome do representante da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB))
+Em atenção ao seu Ofício Nº _______/______, de ___/___/20__, solicitamos que o representante legal da Empresa ________________________________, CNPJ _________________, compareça à agência ________ (indicar agência) do Banco do Brasil munida da documentação abaixo listada para assinar o contrato de Depósito em Garantia – bloqueado para movimentação, destinada a receber créditos a título de provisão para encargos trabalhistas do Contrato Nº ___/____, firmado por esta COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+Ratifico que, conforme previsto no Termo de Cooperação Técnica Nº _____/-_____ firmado com a Instituição Financeira, qualquer tipo de movimentação financeira somente ocorrerá mediante solicitação da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+Atenciosamente,
+_______________________________________
+(nome do Gerente)
+Nº da Agência do BANCO
+ANEXO C DO ANEXO VI
+Ofício Nº _____/_____
+_____________, ___ de _______ de 20__.
+Senhor,
+Informamos abaixo os dados para abertura de Conta-Depósito em Garantia – bloqueado para movimentação à empresa ___________________, CNPJ ___________, na Agência __________, da Instituição Financeira ______________, prefixo __________, destinada a receber créditos a título de provisão para encargos trabalhistas do Contrato Nº _____/____.
+Agência: __________________
+Convenente Subordinante: COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB)
+Cidade/Município: _______________________
+Comunico que essa Administração Pública poderá realizar os créditos após pré-cadastramento no portal da Instituição Financeira, sítio ________________.
+Ratifico que a conta somente será aberta após o acolhimento do primeiro depósito e, conforme Termo de Cooperação Técnica Nº XXX/20__, qualquer tipo de movimentação financeira ocorrerá mediante solicitação da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+Ratificamos que a Conta somente será aberta após o acolhimento do primeiro depósito e, conforme Termo de Cooperação Técnica Nº ____/____, qualquer tipo de movimentação financeira ocorrerá mediante solicitação da COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+Atenciosamente,
+_______________________________________
+(nome do Gerente)
+Nº da Agência do BANCO
+ANEXO D DO ANEXO VI
+Ofício Nº ____/____
+____________, ____ de _______ de 20__.
+A(o) Senhor(a) Gerente
+(nome do gerente)
+(endereço da agência com CEP)
+Senhor (a) Gerente,
+Solicito DEBITAR, conforme indicado a seguir, a movimentação de R$ da Conta Nº _____ da Agência Nº __________ de titularidade de _______________, (nome do proponente)
+Inscrito no CNPJ sob o Nº _____________, aberta para receber recursos retidos de rubricas constantes da planilha de custos e formação de preços do Contrato Nº XXX/XXX, firmado por esta COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), e CREDITAR na seguinte Conta-Depósito Vinculada – bloqueada para movimentação:
+--- TABELA ---
+Instituição Financeira | Agência | Conta | CPF/CNPJ
+ |  |  | 
+--- FIM TABELA ---
+Atenciosamente,
+____________________________________________________________
+Assinatura do Ordenador de despesas da COMPANHIA NACIONAL DE
+ABASTECIMENTO (CONAB) ou do empregado previamente designado pelo Ordenador
+ANEXO E DO ANEXO VI
+Ofício/Carta Nº ______ (número sequencial)
+___________, ___ de ________ de 20__.
+Senhor __________________________________________,
+(nome do COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB))
+Em atenção ao seu Ofício Nº XXX/20__, de ___/___/20__, informo a efetivação de DÉBITO na conta-depósito vinculada – bloqueada para movimentação – de Nº _________, da Agência Nº _________, da Instituição Financeira, e CRÉDITO na seguinte Conta-Depósito Vinculada – bloqueada para movimentação:
+--- TABELA ---
+CREDITAR
+Instituição Financeira | Agência | Conta | CPF/CNPJ
+ |  |  | 
+--- FIM TABELA ---
+Atenciosamente,
+_______________________________________
+(nome do Gerente)
+Nº da Agência do BANCO
+ANEXO F DO ANEXO VI
+AUTORIZAÇÃO
+À Agência _______________________ da Instituição Financeira.
+_______________________________ (endereço da agência)
+Senhor (a) Gerente,
+Autorizo, em caráter irrevogável e irretratável, que a COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) solicite a essa agência bancária, na forma indicada por essa agência, qualquer tipo de movimentação financeira na Conta-Depósito Vinculada – bloqueada para movimentação nº ___________, de minha titularidade, aberta para receber recursos retidos de rubricas constantes da planilha de custos e formação de preços do Contrato Nº XX/XXX, firmado com a COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB), bem como tenha acesso irrestrito aos saldos da referida Conta-Depósito Vinculada – bloqueada para movimentação, extratos e movimentações financeiras, inclusive de aplicações financeiras.
+Atenciosamente,
+(Local e data)
+___________________________________________
+Assinatura do titular da Conta-Depósito
+Vinculada – bloqueada para movimentação
+ANEXO G DO ANEXO VI
+Ofício Nº ______/____
+___________, ____ de ________ de 20__.
+Ao (A) Senhor(a) Gerente
+(nome do gerente)
+(endereço da agência com CEP)
+Senhor (a) Gerente,
+Solicito providenciar a geração de chaves e senhas iniciais de acesso aos aplicativos dos sistemas de autoatendimento dessa Instituição Financeira para os servidores a seguir indicados:
+--- TABELA ---
+CPF | Nome | Documento/Poderes
+ |  | 
+ |  | 
+ |  | 
+ |  | 
+ |  | 
+--- FIM TABELA ---
+Atenciosamente,
+______________________________________________________________
+Assinatura do Ordenador de Despesas da COMPANHIA NACIONAL DE
+ABASTECIMENTO (CONAB) ou do empregado previamente designado pelo ordenador
+ANEXO H DO TERMO DE COOPERAÇÃO TÉCNICA Nº _____/____
+Ofício Nº ______/____
+___________, ____ de _______ de 20__.
+Ao (A) Senhor(a)
+(nome do Proprietário da empresa contratada pela Administração Pública Federal)
+(endereço da empresa com CEP)
+Senhor (a) Sócio-Proprietário,
+1.Informo que solicitei a abertura da Conta-Depósito Vinculada – bloqueada para movimentação, pertencente ao CNPJ sob Nº _____________, na Agência Nº __________, da INSTITUIÇÃO FINANCEIRA ________________, em seu nome, aberta para receber recursos retidos de rubricas constantes da planilha de custos e formação de preços do Contrato Nº XX/XXXX, firmado entre essa empresa e esta COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB).
+2.Na oportunidade, solicito comparecer, em no máximo 20 (vinte) dias corridos, a contar do recebimento deste Ofício, à referida agência para fornecer a documentação indicada no ato convocatório de licitação, de acordo com as normas do Banco Central, bem como assinar os documentos indicados pela Instituição Financeira e autorizar, em caráter irrevogável e irretratável, o acesso irrestrito desta COMPANHIA NACIONAL DE ABASTECIMENTO (CONAB) aos saldos da referida Conta-Depósito, aos extratos e a movimentações financeiras, inclusive de aplicações financeiras e solicitar quaisquer movimentações financeiras da referida Conta-Depósito Vinculada – bloqueada para movimentação.
+3.Informo que o descumprimento do prazo indicado no parágrafo anterior poderá ensejar aplicação das sanções previstas na Cláusula do mencionado contrato.
+Atenciosamente,
+______________________________________________________________
+Assinatura do Ordenador de Despesas da COMPANHIA NACIONAL DE
+ABASTECIMENTO (CONAB) ou do empregado previamente designado pelo ordenador

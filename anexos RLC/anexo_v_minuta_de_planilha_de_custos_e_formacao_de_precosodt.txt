@@ -1,0 +1,254 @@
+MINUTA DE PLANILHA E FORMAÇÃO DE PREÇOS
+--- TABELA ---
+N.º do Processo:
+Licitação N.º: /
+--- FIM TABELA ---
+Dia / /  às : horas
+DISCRIMINAÇÃO DOS SERVIÇOS (DADOS REFERENTES À CONTRATAÇÃO)
+--- TABELA ---
+A | Data de apresentação da proposta (dia/mês/ano): | 
+B | Município/UF: | 
+C | Ano do Acordo, Convenção ou Dissídio Coletivo: | 
+D | Número de meses de execução contratual: | 
+--- FIM TABELA ---
+IDENTIFICAÇÃO DO SERVIÇO
+--- TABELA ---
+Tipo de Serviço | Unidade de Medida | Quantidade Total a Contratar (Em função da unidade de medida)
+ |  | 
+ |  | 
+ |  | 
+--- FIM TABELA ---
+Nota 1: Esta tabela poderá ser adaptada às características do serviço contratado, inclusive no que concerne às rubricas e suas respectivas provisões e/ou estimativas, desde que haja justificativa.
+Nota 2: As provisões constantes desta planilha poderão ser desnecessárias quando se tratar de determinados serviços que prescindam da dedicação exclusiva dos trabalhadores da contratada para com a Administração.
+1. MÓDULOS
+Mão de obra
+# Mão de obra vinculada à execução contratual
+--- TABELA ---
+DADOS PARA COMPOSIÇÃO DOS CUSTOS REFERENTES A MÃO DE OBRA
+1 | Tipo de Serviço (mesmo serviço com características distintas)
+2 | Classificação Brasileira de Ocupações (CBO)
+3 | Salário Normativo da Categoria Profissional
+4 | Categoria Profissional (vinculada à execução contratual)
+5 | Data-base da Categoria (dia/mês/ano)
+--- FIM TABELA ---
+Nota 1: Deverá ser elaborado um quadro para cada tipo de serviço.
+Nota 2: A planilha será calculada considerando o valor mensal do empregado.
+Módulo 1 – Composição da Remuneração
+--- TABELA ---
+1 | Composição da Remuneração | Valor (R$)
+A | Salário-base | 
+B | Adicional de Periculosidade | 
+C | Adicional de Insalubridade | 
+D | Adicional Noturno | 
+E | Adicional de Hora Noturna Reduzida | 
+F | Adicional de Hora Extra no Feriado Trabalhado | 
+G | Outros (especificar) | 
+Total | 
+--- FIM TABELA ---
+Nota 1: O Módulo 1 refere-se ao valor mensal devido ao empregado pela prestação do serviço no período de 12 meses.
+Nota 2: Para o empregado que labora a jornada 12x36, em caso da não concessão ou concessão parcial do intervalo intrajornada (§ 4º do art. 71 da CLT), o valor a ser pago será inserido na remuneração utilizando a alínea “G”.
+Módulo 2 – Encargos e Benefícios Anuais, Mensais e Diários
+Submódulo 2.1 – 13º (décimo terceiro) Salário, Férias e Adicional de Férias
+--- TABELA ---
+2.1 | 13º (décimo terceiro) Salário, Férias e Adicional de Férias | Valor (R$)
+A | 13º (décimo terceiro) Salário | 
+B | Férias e Adicional de Férias | 
+Total | 
+--- FIM TABELA ---
+Nota 1: Como a planilha de custos e formação de preços é calculada mensalmente, provisiona-se proporcionalmente 1/12 (um doze avos) dos valores referentes a gratificação natalina e adicional de férias.
+Nota 2: O adicional de férias contido no Submódulo 2.1 corresponde a 1/3 (um terço) da remuneração que por sua vez é divido por 12 (doze) conforme Nota 1 acima.
+Submódulo 2.2 – Encargos Previdenciários (GPS), Fundo de Garantia por Tempo de Serviço (FGTS) e outras contribuições
+--- TABELA ---
+2.2 | GPS, FGTS e outras contribuições | Percentual (%) | Valor (R$)
+A | INSS | 20,00% | 
+B | Salário Educação | 2,50% | 
+C | SAT |  | 
+D | SESC ou SESI | 1,50% | 
+E | SENAI – SENAC | 1,00% | 
+F | SEBRAE | 0,60% | 
+G | INCRA | 0,20% | 
+H | FGTS | 8,00% | 
+Total |  | 
+--- FIM TABELA ---
+Nota 1: Os percentuais dos encargos previdenciários, do FGTS e demais contribuições são aqueles estabelecidos pela legislação vigente.
+Nota 2: O SAT a depender do grau de risco do serviço variará entre 1%, para risco leve, de 2%, para risco médio, e de 3% de risco grave.
+Nota 3: Esses percentuais incidem sobre o Módulo 1, o Submódulo 2.1, o Módulo 3, Módulo 4 e o Módulo 6.
+Submódulo 2.3 – Benefícios Mensais e Diários
+--- TABELA ---
+2.3 | Benefícios Mensais e Diários | Valor (R$)
+A | Transporte | 
+B | Auxílio-Refeição/Alimentação | 
+C | Assistência Médica e Familiar | 
+D | Outros (especificar) | 
+Total | 
+--- FIM TABELA ---
+Nota 1: O valor informado deverá ser o custo real do benefício (descontado o valor eventualmente pago pelo empregado).
+Nota 2: Observar a previsão dos benefícios contidos em Acordos, Convenções e Dissídios Coletivos de Trabalho e atentar-se ao disposto no artigo 17 do Regulamento de Licitações e Contratos da Conab.
+Quadro Resumo do Módulo 2 – Encargos e Benefícios anuais, mensais e diários
+--- TABELA ---
+2 | Encargos e Benefícios Anuais, Mensais e Diários | Valor (R$)
+2.1 | 13º (décimo terceiro) Salário, Férias e Adicional de Férias | 
+2.2 | GPS, FGTS e outras contribuições | 
+2.3 | Benefícios Mensais e Diários | 
+Total | 
+--- FIM TABELA ---
+Módulo 3 – Provisão para Rescisão
+--- TABELA ---
+3 | Provisão para Rescisão | Valor (R$)
+A | Aviso Prévio Indenizado | 
+B | Incidência do FGTS sobre o Aviso Prévio Indenizado | 
+C | Multa do FGTS e contribuição social sobre o Aviso Prévio Indenizado | 
+D | Aviso Prévio Trabalhado | 
+E | Incidência dos encargos do submódulo 2.2 sobre o Aviso Prévio Trabalhado | 
+F | Multa do FGTS e contribuição social sobre o Aviso Prévio Trabalhado | 
+Total | 
+--- FIM TABELA ---
+Módulo 4 – Custo de Reposição do Profissional Ausente
+Nota 1: Os itens que contemplam o módulo 4 se referem ao custo dos dias trabalhados pelo repositor/substituto que por ventura venha cobrir o empregado nos casos de Ausências Legais (Submódulo 4.1) ou na Intrajornada (Submódulo 4.2), a depender da prestação do serviço.
+Nota 2: Haverá a incidência do Submódulo 2.2 sobre esse módulo.
+Submódulo 4.1 – Ausências Legais
+--- TABELA ---
+4.1 | Ausências Legais | Valor (R$)
+A | Férias | 
+B | Ausências Legais | 
+C | Licença-paternidade | 
+D | Ausência por acidente de trabalho | 
+E | Afastamento Maternidade | 
+F | Outros (especificar) | 
+Total | 
+--- FIM TABELA ---
+Nota: As alíneas “a” a “f” referem-se somente ao custo que será pago ao repositor pelos dias trabalhados quando da necessidade de substituir a mão de obra alocada na prestação do serviço.
+Submódulo 4.2 – Intrajornada
+--- TABELA ---
+4.2 | Intrajornada | Valor (R$)
+A | Intervalo para repouso ou alimentação | 
+Total | 
+--- FIM TABELA ---
+Nota: Quando houver a necessidade de reposição de um empregado durante sua ausência nos casos de intervalo para repouso ou alimentação deve-se contemplar o Submódulo 4.2.
+Quadro Resumo do Módulo 4 – Custo de Reposição do Profissional Ausente
+--- TABELA ---
+4 | Custo de Reposição do Profissional Ausente | Valor (R$)
+4.1 | Ausências Legais | 
+4.2 | Intrajornada | 
+Total | 
+--- FIM TABELA ---
+Módulo 5 – Insumos Diversos
+--- TABELA ---
+5 | Insumos Diversos | Valor (R$)
+A | Uniformes | 
+B | Materiais | 
+C | Equipamentos | 
+D | Outros (especificar) | 
+Total | 
+--- FIM TABELA ---
+Nota: Valores mensais por empregado.
+Módulo 6 – Custos Indiretos, Tributos e Lucro
+--- TABELA ---
+6 | Custos Indiretos, Tributos e Lucro | Percentual (%) | Valor (R$)
+A | Custos Indiretos |  | 
+B | Lucro |  | 
+C | Tributos |  | 
+ | C.1. Tributos Federais (especificar) |  | 
+ | C.2. Tributos Estaduais (especificar) |  | 
+ | C.3. Tributos Municipais (especificar) |  | 
+Total |  | 
+--- FIM TABELA ---
+Nota 1: Custos Indiretos, Tributos e Lucro por empregado.
+Nota 2: O valor referente a tributos é obtido aplicando-se o percentual sobre o valor do faturamento.
+2. QUADRO RESUMO DO CUSTO POR EMPREGADO
+--- TABELA ---
+ | Mão de obra vinculada à execução contratual(valor por empregado) | Valor (R$)
+A | Módulo 1 - Composição da Remuneração | 
+B | Módulo 2 - Encargos e Benefícios Anuais, Mensais e Diários | 
+C | Módulo 3 - Provisão para Rescisão | 
+D | Módulo 4 - Custo de Reposição do Profissional Ausente | 
+E | Módulo 5 - Insumos Diversos | 
+Subtotal (A + B +C+ D+E) | 
+F | Módulo 6 – Custos Indiretos, Tributos e Lucro | 
+Valor Total por Empregado | 
+--- FIM TABELA ---
+3. QUADRO RESUMO DO VALOR MENSAL DOS SERVIÇOS
+--- TABELA ---
+Tipo de Serviço (A) | Valor Proposto por Empregado (B) (R$) | Qtde. de Empregados por Posto (C) | Valor Proposto por Posto (D) = (B x C) (R$) | Qtde. de Postos (E) | Valor Total doServiço (F) = (D x E) (R$)
+I | Serviço 1 (indicar) |  |  |  |  | 
+II | Serviço 2 (indicar) |  |  |  |  | 
+N | Serviço N (indicar) |  |  |  |  | 
+Valor Mensal dos Serviços (I + II + N) | 
+--- FIM TABELA ---
+4. QUADRO DEMONSTRATIVO DO VALOR GLOBAL DA PROPOSTA
+--- TABELA ---
+ | VALOR GLOBAL DA PROPOSTA
+ | Descrição | Valor (R$)
+A | Valor proposto por unidade de medida * | 
+B | Valor mensal do serviço | 
+C | Valor global da proposta(Valor mensal do serviço multiplicado pelo número de meses do contrato). | 
+--- FIM TABELA ---
+Nota: Informar o valor da unidade de medida por tipo de serviço.
+5. COMPLEMENTO DOS SERVIÇOS DE VIGILÂNCIA VALOR MENSAL DOS SERVIÇOS
+--- TABELA ---
+ | Escala de Trabalho | Preço Mensal do Posto | Número de Postos | Subtotal(R$)
+I. | 44 (quarenta e quatro) horas semanais diurnas, de segunda a sexta-feira, envolvendo 1 (um) vigilante. |  |  | 
+II. | 12 (doze) horas diurnas, de segunda-feira a domingo, envolvendo 2 (dois) vigilantes em turnos de 12 (doze) por 36 (trinta e seis) horas. |  |  | 
+III. | 12 (doze) horas noturnas, de segunda-feira a domingo, envolvendo 2 (dois) vigilantes em turnos de 12 (doze) por 36 (trinta e seis) horas. |  |  | 
+IV. | 12 (doze) horas diurnas, de segunda a sexta-feira, envolvendo 2 (dois) vigilantes em turnos de 12 (doze) por 36 (trinta e seis) horas. |  |  | 
+V. | 12 (doze) horas noturnas, de segunda a sexta-feira, envolvendo 2 (dois) vigilantes em turnos de 12 (doze) por 36 (trinta e seis) horas. |  |  | 
+ | Outras (especificar) |  |  | 
+Total | 
+--- FIM TABELA ---
+Nota: Nos casos de inclusão de outros tipos de postos, deve ser observado o disposto no artigo 136, § 2º deste regulamento.
+6. COMPLEMENTO DOS SERVIÇOS DE LIMPEZA E CONSERVAÇÃO
+PREÇO MENSAL UNITÁRIO POR M² (metro quadrado)
+# ÁREA INTERNA – (Fórmulas exemplificativas de cálculo para área interna – alíneas “a” e “b” do artigo 134, inciso I; para as demais alíneas, deverão ser incluídos novos campos na planilha com a metragem adequada).
+--- TABELA ---
+Mão de Obra | (1) Produtividade(1/M²) | (2) Preço Homem-Mês (R$) | (1x2) Subtotal(R$/M²)
+ENCARREGADO | _____1_____(30** x P*) |  | 
+SERVENTE | ____1___P* |  | 
+Total | 
+--- FIM TABELA ---
+P = produtividade de referência do trabalhador prevista no artigo 134, inciso I.
+ÁREA EXTERNA – (Fórmulas exemplificativas de cálculo para área externa – alíneas “a”, “c”, “d” e “e” artigo 134, inciso II; para as demais alíneas, deverão ser incluídos novos campos na planilha com a metragem adequada).
+--- TABELA ---
+Mão de Obra | (1) Produtividade(1/M²) | (2) Preço Homem-Mês (R$) | (1x2) Subtotal(R$/M²)
+ENCARREGADO | _____1_______(30** x P*) |  | 
+SERVENTE | ____1____P* |  | 
+Total | 
+--- FIM TABELA ---
+P = produtividade de referência do trabalhador prevista no artigo 134, inciso II.
+ESQUADRIA EXTERNA (Fórmulas exemplificativas de cálculo para área externa – alíneas “b” e “c” artigo 134, inciso III; para as demais alíneas, deverão ser incluídos novos campos na planilha com a metragem adequada).
+--- TABELA ---
+Mão de Obra | (1) Produti-vidade (1/M²) | (2) Frequência no Mês (Horas) | (3) Jornada de Trabalho no Mês (Horas) | (4) (1x2x3)Ki**** | (5) Preço Homem-Mês (R$) | (4x5) Subtotal(R$/M²)
+ENCARREGADO | ____1____30** x P* | 16*** | ____1____188,76 | 0,0000128 |  | 
+SERVENTE | ___1___P* | 16*** | ____1____188,76 | 0,0003853 |  | 
+Total | 
+--- FIM TABELA ---
+P = produtividade de referência do trabalhador prevista no artigo 134, inciso III.
+FACHADA ENVIDRAÇADA – FACE EXTERNA
+--- TABELA ---
+Mão de Obra | (1) Produti-vidade (1/M²) | (2) Frequência no Semestre (Horas) | (3) Jornadade Trabalho no Semestre(Horas) | (4) (1x2x3)Ke**** | (5) Preço Homem-Mês (R$) | (4x5) Subtotal(R$/M²)
+ENCARREGADO | ____1____4** x P* | 8*** | ____1____1.132,6 | 0,0000161 |  | 
+SERVENTE | ____1___P* | 8*** | ____1____1.132,6 | 0,0000642 |  | 
+Total | 
+--- FIM TABELA ---
+P = produtividade de referência do trabalhador prevista no artigo 134, inciso IV.
+ÁREA MÉDICO-HOSPITALAR E ASSEMELHADOS
+--- TABELA ---
+Mão de Obra | (1) Produtividade(1/M²) | (2) Preço Homem-Mês (R$) | (1x2) Subtotal(R$/M²)
+ENCARREGADO | ____1_____30** x P* |  | 
+SERVENTE | ___1___P* |  | 
+Total | 
+--- FIM TABELA ---
+P = produtividade de referência do trabalhador prevista no artigo 134, inciso V.
+* Caso as produtividades mínimas adotadas sejam diferentes, estes valores das planilhas, bem como os coeficientes deles decorrentes (Ki e Ke), deverão ser adequados à nova situação.
+** Caso a relação entre serventes e encarregados seja diferente, os valores das planilhas, bem como os coeficientes deles decorrentes (Ki e Ke), deverão ser adequados à nova situação.
+*** Frequência sugerida em horas por mês. Caso a frequência adotada, em horas, por mês ou semestre, seja diferente, os valores, bem como os coeficientes deles decorrentes (Ki e Ke), deverão ser adequados à nova situação.
+7. VALOR MENSAL DOS SERVIÇOS
+--- TABELA ---
+Tipo de Área | Preço Mensal Unitário(R$/ M²) | Área(M²) | Subtotal (R$)
+I - Área Interna |  |  | 
+II - Área Externa |  |  | 
+III - Esquadria Externa |  |  | 
+IV - Fachada Envidraçada |  |  | 
+V - Área Médico-Hospitalar |  |  | 
+Outras (especificar) |  |  | 
+Total | 
+--- FIM TABELA ---

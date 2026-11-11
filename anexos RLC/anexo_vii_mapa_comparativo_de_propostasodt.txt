@@ -1,0 +1,38 @@
+--- TABELA ---
+ |  | MAPA COMPARATIVO DE PROPOSTAS |  | 1. Licitação N.º | 2. Processo N.º | 3. Data | 4. Número
+
+DESCRIÇÃO
+5.Item | 6. Especificação | 7. Unid. | 8. Quant. | 9. Fornecedores | 9. Fornecedores |  |  |  |  |  | 
+9. Fornecedores
+ |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  | 
+
+10. Elaborado por | 11. Conferido por | 12. Total Geral = 13. Prazo de Entrega14. Condição de Pagto.15. Garantia16. Validade | 12. Total Geral = |  |  |  |  |  |  | 13. Prazo de Entrega |  |  |  |  |  |  | 14. Condição de Pagto. |  |  |  |  |  |  | 15. Garantia |  |  |  |  |  |  | 16. Validade |  |  |  |  |  | 
+12. Total Geral = |  |  |  |  |  | 
+13. Prazo de Entrega |  |  |  |  |  | 
+14. Condição de Pagto. |  |  |  |  |  | 
+15. Garantia |  |  |  |  |  | 
+16. Validade |  |  |  |  |  | 
+--- FIM TABELA ---
+60.000/006

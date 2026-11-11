@@ -1,0 +1,32 @@
+--- TABELA ---
+ |  | INSTRUMENTO DE MEDIÇÃO DE RESULTADO (IMR)
+
+Indicador
+N.º + Título do indicador que será utilizado
+Item | Descrição
+Finalidade | 
+Meta a cumprir | 
+Instrumento de medição | 
+Forma de acompanhamento | 
+Periodicidade | 
+Mecanismo de cálculo | 
+Início de vigência | 
+Faixas de ajuste no pagamento | 
+Sanções | 
+Observações | 
+
+Exemplo de indicador
+N. º 01 – Prazo de atendimento de demandas (OS)
+Item | Descrição
+Finalidade | Garantir um atendimento célere as demandas da Conab.
+Meta a cumprir | 24 h.
+Instrumento de medição | Sistema informatizado de solicitação de serviços – Ordem de Serviços (OS) eletrônica.
+Forma de acompanhamento | Pelo sistema.
+Periodicidade | Mensal.
+Mecanismo de cálculo | Cada OS será verificada e valorada individualmente. N.º de horas no atendimento/24 = X
+Início de vigência | Data da assinatura do contrato.
+Faixas de ajuste no pagamento | X até 1 – 100% do valor da OSDe 1 a 1,5 – 90% do valor da OSDe 1,5 a 2 – 80% do valor da OS
+Sanções | 20% das OS acima de 2 – multa de XX30% das OS acima de 2 – multa de XX + rescisão contratual
+Observações | 
+--- FIM TABELA ---
+RLC

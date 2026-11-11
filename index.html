@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerador de TR e PB — Conab</title>
+  <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+  <link rel="stylesheet" href="https://unpkg.com/@govbr-ds/core@latest/dist/core.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="br-body">
+  <header class="br-header" id="cabecalho-site">
+    <div class="br-header-top">
+      <img src="assets/logo-conab.png" alt="Conab — Companhia Nacional de Abastecimento" class="header-logo">
+      <span class="header-titulo">Gerador de Termo de Referência e Projeto Básico</span>
+    </div>
+    <button id="btn-voltar-triagem" class="br-button secondary" type="button" hidden>Voltar</button>
+    <button id="btn-salvar-rascunho" class="br-button secondary" type="button">Salvar Rascunho</button>
+    <input type="file" id="input-carregar-rascunho" accept="application/json" hidden>
+    <button id="btn-carregar-rascunho" class="br-button secondary" type="button">Carregar Rascunho</button>
+  </header>
+
+  <main>
+    <section id="tela-triagem" class="br-container"></section>
+    <section id="tela-painel" class="br-container" hidden>
+      <div class="layout-painel-preview">
+        <div id="tela-painel-formulario"></div>
+        <aside id="painel-preview" class="painel-preview" aria-label="Pré-visualização do documento"></aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="conferencia-overlay" class="br-modal" hidden></div>
+
+  <script src="js/lib/jszip.min.js"></script>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+MINUTA DE MATRIZ DE RISCOS
+--- TABELA ---
+ | Identificação | 5. Avaliação | Tratamento ao Risco
+1. Objeto | 2. Evento de Risco | 3. Causas | 4. Consequências | Probabi-lidade(P) | Impacto(I) | 6. Nível de Risco(P) x (I) | 7. Respostaao eventodo Risco | 8. Responsável
+1 |  |  |  |  |  |  |  |  | 
+2 |  |  |  |  |  |  |  |  | 
+3 |  |  |  |  |  |  |  |  | 
+4 |  |  |  |  |  |  |  |  | 
+5 |  |  |  |  |  |  |  |  | 
+.. |  |  |  |  |  |  |  |  | 
+--- FIM TABELA ---
+1. Descrição do objeto previsto para contratação.
+2. O risco é um evento incerto que, se ocorrer, afeta a realização dos objetivos da contratação.
+3. Condições que viabilizam a concretização de um evento de risco.
+4. Identificação de quais são as consequências no caso da ocorrência do risco.
+# 5. A avaliação da probabilidade e do impacto deverá ser analisada em um escala de 1 a 5, conforme definida nas tabelas abaixo:
+--- TABELA ---
+Escala de Probabilidade (P) – Associada às chances do risco ocorrer
+Descritor | Descrição | Nível
+Muito Baixa | Evento extraordinário, sem histórico de ocorrência. | 1
+Baixa | Evento casual e inesperado, muito embora raro, há histórico de sua ocorrência. | 2
+Média | Evento esperado, de frequência reduzida, e com histórico de ocorrência parcialmente conhecido. | 3
+Alta | Evento usual, com histórico de ocorrência amplamente conhecido. | 4
+Muito Alta | Evento repetitivo e constante. | 5
+--- FIM TABELA ---
+--- TABELA ---
+Escala de Impacto (I) – Associada às consequências no caso do risco ocorrer
+Descritor | Descrição | Nível
+Muito Baixo | Impacto insignificante nos objetivos. | 1
+Baixo | Impacto mínimo nos objetivos. | 2
+Médio | Impacto mediano nos objetivos, com possibilidade de recuperação. | 3
+Alto | Impacto significante nos objetivos, com possibilidade remota de recuperação. | 4
+Muito Alto | Impacto máximo nos objetivos, sem possibilidade de recuperação. | 5
+--- FIM TABELA ---
+6. Após o resultado do cálculo da probabilidade x impacto será obtido o nível do risco, que poderá ser classificado como baixo, médio, elevado e extremo, conforme tabela abaixo:
+--- TABELA ---
+Nível de Risco
+1 a 2 | Baixo
+3 a 6 | Médio
+8 a 12 | Elevado
+15 a 25 | Extremo
+--- FIM TABELA ---
+7. Tratar o risco consiste em propor ações para prevenir, transferir, mitigar ou aceitar o risco. Neste campo, deve-se descrever a ação/resposta mais adequada para tratamento do risco identificado.
+8. Identificar o responsável/os responsáveis pela ação proposta.
+--- TABELA ---
+Elaborado por:_________________________________________________Nome e Assinatura
+--- FIM TABELA ---
+RLC
