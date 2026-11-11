@@ -1,0 +1,820 @@
+##### fase1_numeracao #####
+=== TR-Bens ===
+[ALTA] Alínea 'h)' isolada na Seção 10 (DAS OBRIGAÇÕES DA CONTRATADA), sem as alíneas a) a g) anteriores.
+Area: Alíneas soltas
+Detalhe: Na Seção 10, depois de dois parágrafos de texto corrido (10.1 e o parágrafo sobre diversidade/equidade), o próximo bloco pula direto para 'h) comprovar a implementação do Programa de Integridade...'. Não existe nenhuma alínea a), b), c) etc. antes dela nesta seção — é exatamente o mesmo padrão do bug já identificado (h) solto sem a)-g), sobra de uma compressão de texto anterior da minuta-fonte.
+Localizacao: templates/build_template_tr_bens.py, linhas 363-367 (bloco add_paragraph_with_bookmarks com 'h) comprovar a implementação do Programa de Integridade...', bookmark S10_PrazoProgramaIntegridadeMeses); campo correspondente em js/dados-tr-bens.js linhas 106-113 (id S10, campo S10_PrazoProgramaIntegridadeMeses).
+Sugestao: Conferir a minuta-fonte SEI 55379667 para saber se havia alíneas a) a g) com outras obrigações da Contratada que foram perdidas numa edição anterior; se sim, restaurá-las. Se não houver mais alíneas nesta seção, remover o prefixo 'h)' e deixar o parágrafo como texto corrido (ex.: '10.2. Comprovar a implementação do Programa de Integridade...'), igual ao tratamento dos parágrafos anteriores da mesma seção.
+
+[ALTA] Sequência de alíneas da Seção 15 (SANÇÕES) pula de c) para e), sem existir alínea d).
+Area: Alíneas com salto
+Detalhe: Os itens de multa da Seção 15 aparecem como a) (linha 423), b) (linha 437), c) (linha 441) e em seguida 'e) multa moratória...' (linha 445), f) (450), g) (454), h) (458). Não há nenhuma alínea 'd)' no documento gerado — a lista de sanções fica com um buraco na lettering, o que é confuso para quem lê o TR final e pode gerar dúvida sobre se falta conteúdo.
+Localizacao: templates/build_template_tr_bens.py, linhas 422-460 (blocos add_paragraph_with_bookmarks das alíneas a) até h) da Seção 15 — DAS SANÇÕES ADMINISTRATIVAS).
+Sugestao: Renomear as letras a partir da multa moratória: trocar 'e) multa moratória' (linha 445) para 'd)', 'f) multa compensatória... parcial' (linha 450) para 'e)', 'g) multa compensatória... total' (linha 454) para 'f)', e 'h) multa rescisória' (linha 458) para 'g)'. Não é preciso alterar os ids/bookmarks (S15_...), só o texto fixo da letra em cada add_paragraph_with_bookmarks.
+
+[MEDIA] Na Seção 6, o número '6.1.2.' é usado duas vezes seguidas para parágrafos diferentes, e '6.1.3.' nunca aparece.
+Area: Numeração de itens duplicada/pulada
+Detalhe: Linha 293: '6.1.2. Quando o objeto envolver a entrega em mais de um endereço...'. Logo depois, linha 298: '6.1.2. O prazo de entrega dos bens é de ...' — mesmo número 6.1.2 usado num segundo parágrafo diferente. Em seguida o texto vai direto para '6.1.4.' (linha 303) e '6.1.5.' (linha 307), sem nunca usar '6.1.3.'.
+Localizacao: templates/build_template_tr_bens.py, linhas 292-309 (Seção 6 — DA DESCRIÇÃO DA AQUISIÇÃO, subseção 6.1).
+Sugestao: Renumerar o parágrafo da linha 298 ('O prazo de entrega dos bens é de...') de '6.1.2.' para '6.1.3.', mantendo 6.1.4 e 6.1.5 como estão. Isso corrige tanto a duplicação quanto o número 6.1.3 que nunca era usado.
+
+[MEDIA] Na Seção 6, subseção 6.2, o item pula de 6.2.1 direto para 6.2.3, sem existir 6.2.2.
+Area: Numeração de itens com salto
+Detalhe: Linha 312: '6.2.1. Os bens serão recebidos provisoriamente...'. Linha 316: '6.2.3. Os bens serão recebidos definitivamente...'. Não há nenhum parágrafo numerado '6.2.2.' no documento gerado.
+Localizacao: templates/build_template_tr_bens.py, linhas 310-318 (Seção 6 — DA DESCRIÇÃO DA AQUISIÇÃO, subseção 6.2 — DO RECEBIMENTO DOS BENS).
+Sugestao: Renumerar '6.2.3. Os bens serão recebidos definitivamente...' (linha 316) para '6.2.2.'.
+
+[MEDIA] Na Seção 5, o item sobre local/horário da amostra é numerado '5.2.2.1', mas não existe nenhum '5.2.2' — o item anterior era '5.2.1.1', sugerindo que deveria ser '5.2.1.2'.
+Area: Numeração hierárquica inconsistente
+Detalhe: Sequência: '5.2.1.' (linha 272/273, condicional sim/não sobre exigir amostra), '5.2.1.1.' (linha 276, prazo para apresentação da amostra), depois '5.2.2.1.' (linha 279, local e horário da amostra). Não existe um '5.2.2.' isolado (cabeçalho ou frase) antes dele nem um '5.2.1.2.' — o salto de 5.2.1.1 para 5.2.2.1 é inconsistente com a hierarquia normal (seria de se esperar 5.2.1.2, já que o conteúdo ainda trata do mesmo subtema 'amostra', não de um novo subtema 5.2.2).
+Localizacao: templates/build_template_tr_bens.py, linhas 269-281 (Seção 5 — DA SELEÇÃO DO FORNECEDOR, subseção 5.2 — DA AMOSTRA DOS BENS).
+Sugestao: Renumerar '5.2.2.1. A amostra deverá ser apresentada em...' (linha 279) para '5.2.1.2.', mantendo a hierarquia consistente com o '5.2.1.1.' anterior (ambos tratam do mesmo item 5.2.1 sobre amostra).
+
+=== TR-Serviços ===
+[ALTA] Alíneas 's)', 'u)', 'v)', 'w)' aparecem na Seção 10 (Obrigações da Contratada) sem as alíneas 'a)' a 'r)' antes delas, e pulando a letra 't)' entre 's)' e 'u)'.
+Area: Alíneas soltas
+Detalhe: Em build_template_tr_servicos.py, a Seção 10 tem um parágrafo fixo de texto corrido (10.1, sem lista de alíneas) e depois insere diretamente a alínea 's) comprovar a implementação do Programa de Integridade...' (bookmark S10_PrazoProgramaIntegridadeMeses) seguida do bloco condicional S10_NaturezaIntelectual com as alíneas 'u)', 'v)', 'w)'. Isso é exatamente o mesmo padrão do bug já identificado no TR-Bens (alínea 'h)' solta sem a)-g)): aqui a minuta original certamente tinha alíneas a) a r) listando as obrigações da Contratada (o texto fixo do parágrafo 10.1 foi comprimido/resumido em prosa, mas as letras de referência 's/u/v/w' foram mantidas do documento fonte). Além disso, falta a alínea 't)' entre 's)' e 'u)' — nenhuma referência a ela existe em nenhum lugar do arquivo.
+Localizacao: templates/build_template_tr_servicos.py, linhas 479-503 (alínea 's)' nas linhas 479-483; bloco 'u)/v)/w)' nas linhas 484-501)
+Sugestao: Ou (a) remover as letras 's)', 'u)', 'v)', 'w)' e reescrever como itens numerados normais (ex.: 10.2, 10.3, 10.4, 10.5) desvinculados de uma lista alfabética inexistente, ou (b) restaurar a lista completa de alíneas a) a w) da minuta original (SEI 55379668) verificando o texto fonte, incluindo a alínea 't)' que falta.
+
+[ALTA] Salto de numeração de '8.1' para '8.17' na Seção 8 (Acompanhamento e Fiscalização) — não existem itens 8.2 a 8.16.
+Area: Numeração de itens
+Detalhe: add_heading('8. DO ACOMPANHAMENTO E DA FISCALIZAÇÃO') é seguido apenas do parágrafo '8.1' (linhas 432-436) e, na sequência imediata, do parágrafo bookmarked 'S08_RotinasFiscalizacaoEspecificas' rotulado '8.17.' (linha 437). Não há nenhum item 8.2 até 8.16 no documento. O número '8.17' é claramente um resíduo do documento fonte (a minuta original provavelmente tinha ~17 subitens na seção de fiscalização, todos comprimidos em '8.1', mas o rótulo do último item de rotinas específicas não foi renumerado).
+Localizacao: templates/build_template_tr_servicos.py, linha 437
+Sugestao: Renumerar para '8.2. Rotinas de fiscalização específicas: ' (próximo número sequencial disponível), ou verificar a minuta fonte para saber se conteúdo intermediário (8.2 a 8.16) deveria ter sido preservado e foi perdido na compressão.
+
+[ALTA] O número '6.3.2.' é usado duas vezes seguidas para dois parágrafos diferentes dentro da Seção 6.3 (Local e Prazo de Execução).
+Area: Numeração duplicada
+Detalhe: Linha 357-359: doc.add_paragraph('6.3.2. Quando o objeto envolver a execução em mais de um endereço, os locais adicionais são os seguintes:'). Logo depois, linhas 362-365: add_paragraph_with_bookmarks(['6.3.2. O prazo de execução dos serviços será de ', (S06_PrazoExecucaoDias, '____'), ' dias...']). Os dois parágrafos consecutivos recebem o mesmo número '6.3.2.', quando deveriam ser sequenciais (6.3.2 e 6.3.3).
+Localizacao: templates/build_template_tr_servicos.py, linhas 357-359 e 362-365 (o segundo '6.3.2.' está na linha 363)
+Sugestao: Renumerar o segundo parágrafo (prazo de execução, bookmark S06_PrazoExecucaoDias) para '6.3.3.'.
+
+[ALTA] Falta o item '7.3' na Seção 7 (Garantia Contratual) — o texto pula de '7.2' direto para '7.4'.
+Area: Numeração de itens
+Detalhe: O bloco condicional S07_ExigeGarantia gera '7.1' e '7.2' (linhas 404-420, variante 'Sim') ou apenas '7.1' (variante 'Não', linha 421). Em seguida, o parágrafo fixo das linhas 423-428 começa com '7.4. A inobservância do prazo fixado para apresentação da garantia acarretará a aplicação de multa...'. Não existe nenhum item '7.3' em lugar nenhum do documento. Esse '7.4' é inclusive referenciado depois na Seção 15 ('d) multa moratória por atraso injustificado na entrega da garantia contratual, conforme item 7.4.', linha 634) — a referência aponta corretamente para o texto existente, mas expõe que a sequência 7.1→7.2→7.4 tem um buraco.
+Localizacao: templates/build_template_tr_servicos.py, linhas 402-428 (a lacuna fica entre a linha 419, fim de '7.2', e a linha 424, início de '7.4')
+Sugestao: Renumerar o parágrafo da multa por atraso na garantia para '7.3.' (e atualizar a referência cruzada na Seção 15, linha 634, de 'item 7.4' para 'item 7.3'), ou, se a minuta fonte realmente tinha um item 7.3 com conteúdo próprio, recuperá-lo do SEI 55379668.
+
+[ALTA] Quando o usuário escolhe 'Fiscal Funcional' em S08_TipoFiscalizacao, a Seção 11 (Pagamento) gera as alíneas a), b), d), e), f) — pulando a alínea 'c)', que só existe na variante 'Comissão de Fiscalização'.
+Area: Alínea condicional ausente
+Detalhe: A alínea 'a)' está embutida no parágrafo 11.2 (linha 513-515). O bloco add_bloco_variante(S08_TipoFiscalizacao, ...) (linhas 516-539) gera a alínea 'b)' para ambas as opções, mas a alínea 'c)' ('c) o Fiscal Funcional, no prazo de até 03 dias úteis...') só é incluída na variante 'Comissão de Fiscalização' (linhas 533-537); a variante 'Fiscal Funcional' (linhas 517-523) não tem nenhuma alínea 'c)'. Logo após o bloco, o parágrafo fixo comum (linhas 540-549) prossegue direto com 'd) constatadas impropriedades...', 'e) sanadas as impropriedades...', 'f) no prazo de até 05 dias...' — independentemente da variante escolhida. Resultado: se o usuário escolher 'Fiscal Funcional', o documento gerado terá a sequência a), b), d), e), f), sem nunca ter uma alínea c).
+Localizacao: templates/build_template_tr_servicos.py, linhas 516-539 (bloco condicional) e linhas 540-549 (continuação fixa que assume a existência de 'c)')
+Sugestao: Adicionar a alínea 'c)' equivalente também na variante 'Fiscal Funcional' do bloco (por exemplo, reaproveitando o texto de emissão do Termo de Recebimento Provisório com base no IMR, hoje descrito apenas dentro do próprio 'b)' dessa variante) para que a sequência a)-f) fique completa em ambos os cenários, ou renumerar as alíneas fixas seguintes para não pressupor um 'c)' que só existe condicionalmente.
+
+[MEDIA] Faltam os itens '11.3' e '11.4' na Seção 11 (Pagamento) — o texto pula das alíneas de 11.2 direto para '11.5'.
+Area: Numeração de itens
+Detalhe: A Seção 11 tem '11.1' (linha 508-510) e '11.2' (linha 511-515, cujo conteúdo se estende pelas alíneas a)-f) das linhas 516-549). Em seguida, o próximo item numerado é '11.5' (linhas 550-553: 'Antes de cada pagamento será realizada consulta ao SICAF...'). Não há '11.3' nem '11.4' em nenhum lugar do documento gerado.
+Localizacao: templates/build_template_tr_servicos.py, entre a linha 549 (fim do conteúdo de 11.2) e a linha 550 (início de 11.5)
+Sugestao: Renumerar '11.5' para '11.3' (próximo número disponível), ou verificar a minuta fonte (SEI 55379668) para recuperar o conteúdo original dos itens 11.3 e 11.4, caso tenham sido suprimidos por engano na compressão do texto.
+
+[MEDIA] Os itens '15.8.2.' e '15.9.' aparecem na Seção 15 (Sanções) sem que existam os itens '15.2' a '15.8.1' em nenhum lugar do documento.
+Area: Numeração de itens
+Detalhe: A Seção 15 tem '15.1' (linha 615-621) seguido de alíneas não numeradas a) até j) (linhas 622-664) e das Tabelas 1 e 2 (linhas 666-702). Logo depois, o próximo texto numerado salta diretamente para '15.8.2. As multas moratória, compensatória e rescisória possuem fatos geradores distintos...' (linhas 703-705) e '15.9. Da sanção de suspensão...' (linhas 706-710). Não há nenhum '15.2', '15.3'...'15.8', nem '15.8.1' no documento — os números '15.8.2' e '15.9' são resíduos do documento fonte original (que provavelmente tinha uma estrutura de subitens 15.2 a 15.8.1 detalhando cada multa, hoje resumida nas alíneas a)-j|), mas o texto de fechamento não foi renumerado para acompanhar a nova estrutura em alíneas.
+Localizacao: templates/build_template_tr_servicos.py, linhas 703-705 ('15.8.2.') e linhas 706-710 ('15.9.')
+Sugestao: Renumerar '15.8.2.' para '15.2.' e '15.9.' para '15.3.' (próximos números sequenciais disponíveis após as alíneas de 15.1), mantendo a coerência com o restante da seção; ou, se a minuta fonte realmente possuía os itens intermediários 15.2 a 15.8.1 com conteúdo próprio, recuperá-los do SEI 55379668 em vez de apenas renumerar.
+
+=== TR-Dispensa ===
+[ALTA] Na Cláusula Décima Quinta (Sanções) do Anexo VI (Minuta de Contrato), a alínea d) foi omitida: a sequência pula de c) para e).
+Area: Alíneas soltas / sequência quebrada
+Detalhe: No corpo do TR (Seção 16, arquivo build_template_tr_dispensa.py), a lista de multas segue a) b) c) d) e) f) g) h) i) j) completa — a alínea d) (linha 689) é texto fixo: "d) multa moratória por atraso injustificado na entrega da garantia contratual, conforme item 8.2.". Quando o mesmo bloco de sanções foi recriado dentro do Anexo VI (Cláusula Décima Quinta - Das Sanções Administrativas, a partir da linha 1213), as alíneas a), b) e c) foram reproduzidas (linhas 1220-1231), mas a alínea d) não foi copiada: o próximo parágrafo já é 'e) multa moratória de 0,2%...' (linha 1233). O leitor do Anexo VI vê a sequência a, b, c, e, f, g, h, i, j — sem d) — o que é inconsistente com a lista de sanções paralela do corpo do TR e sugere texto suprimido/corte acidental (mesmo padrão do bug já identificado no TR-Bens, alínea h solta).
+Localizacao: templates/build_template_tr_dispensa.py, linhas 1220-1233 (comparar com o bloco completo do corpo do TR nas linhas 677-719, especialmente a alínea d) na linha 689)
+Sugestao: Inserir, entre a linha 1231 (fim da alínea c) e a linha 1232 (início da alínea e), um doc.add_paragraph com a alínea d) equivalente à da Seção 16, adaptando a referência cruzada 'conforme item 8.2' (que só existe no corpo do TR) para a cláusula correspondente do Anexo VI — por exemplo: doc.add_paragraph("d) multa moratória por atraso injustificado na entrega da garantia contratual, conforme Cláusula Sexta.") — já que a garantia contratual no Anexo VI está na CLÁUSULA SEXTA (linha 1117), não na numeração '8.2' usada no corpo do TR.
+
+=== PB ===
+[MEDIA] A Seção 3 ("DA CARACTERIZAÇÃO DO OBJETO") pula do item "3.1." direto para "3.3." — não existe nenhum "3.2." em lugar nenhum do documento gerado.
+Area: Numeração de itens
+Detalhe: Em build_template_pb.py, a Seção 3 começa com o parágrafo "3.1. As características essenciais da contratação são as seguintes:" (linha 193), seguido de um bloco de atributos SEM numeração própria (bloco variante "Modalidade licitatória/Fundamento da dispensa" + parágrafos "Regime de execução:", "Critério de julgamento:", "Serviço continuado:", "Participação ME/EPP:", "Tipo de objeto:", linhas 194–205). Logo em seguida, o próximo parágrafo já é rotulado "3.3. A forma de contratação, o regime adotado e o critério de julgamento justificam-se, ainda, por..." (linha 207). Rodei um levantamento de TODOS os marcadores "N.M." do arquivo (grep -oE '"[0-9]{1,2}\.[0-9]{1,2}\.') e confirmei que, em todas as outras 33 seções, a numeração de subitens é estritamente sequencial e sem lacunas (1.1→1.5, 2.1→2.5, 4.1→4.5, ..., 34.1→34.3); a Seção 3 é a ÚNICA exceção, com a sequência 3.1, 3.3 (sem 3.2). Isso é o mesmo padrão de bug já identificado na Nota Técnica (uma seção numerada "14." no formulário sem título "14." correspondente no documento) — aqui é o inverso: falta o item "3.2." que qualquer leitor ou referência cruzada esperaria encontrar entre 3.1 e 3.3.
+Localizacao: templates/build_template_pb.py, linhas 192–209 (seção 3, do parágrafo "3.1." ao "3.3.")
+Sugestao: Como o bloco de atributos entre as linhas 194 e 205 (Modalidade/Fundamento, Regime de execução, Critério de julgamento, Serviço continuado, Participação ME/EPP, Tipo de objeto) claramente funciona como uma lista de sub-itens do "3.1." (não merece numeração própria), a correção mais simples e sem efeitos colaterais é renumerar o parágrafo da linha 207 de "3.3." para "3.2.", fechando a lacuna e tornando a seção 1.1→1.2 sequencial de novo. Alternativa (se o item 3.2 for de fato um item substantivo que ficou perdido): adicionar um rótulo "3.2." explícito antes do bloco de atributos (por exemplo, transformando a frase final de 3.1 em algo como "3.1. As características essenciais da contratação são as seguintes: (3.2.)" com um cabeçalho de lista) e manter "3.3." como está. Qualquer uma das duas opções deve ser aplicada de forma consistente com o padrão usado nas demais 33 seções, que não têm lacunas de numeração.
+
+=== Nota de Demanda ===
+[MEDIA] Seção 14 do formulário ("DISPOSIÇÕES FINAIS") não corresponde a nenhum título numerado "14." no documento gerado
+Area: Numeração de seções
+Detalhe: Em js/dados-nota-demanda.js, a seção de id "14" (título "DISPOSIÇÕES FINAIS", campo ND14_Responsaveis) é a última seção do schema, seguindo a seção "13" (IDENTIFICAÇÃO DA MODALIDADE). No entanto, em templates/build_template_nota_demanda.py, o heading correspondente ao campo ND14_Responsaveis não é numerado: é gerado como 'Responsável(is) pelo estudo — Área Demandante' (linha 136), sem o prefixo "14." que todas as demais seções recebem (compare com "1. NECESSIDADE...", ..., "13. IDENTIFICAÇÃO DA MODALIDADE..."). O documento gerado pula de "13." (e "13.1.") direto para um título sem número. Isso é o mesmo padrão de bug já visto na Nota Técnica: uma seção do formulário identificada por um número que não bate com nenhum título "N." real no .docx (aqui o número simplesmente desaparece, em vez de apontar para um número errado).
+Localizacao: templates/build_template_nota_demanda.py:136 (heading) vs js/dados-nota-demanda.js:83 (id: "14", titulo: "DISPOSIÇÕES FINAIS")
+Sugestao: Alterar a linha 136 de build_template_nota_demanda.py para usar o título real da seção 14 do schema, numerado como as demais: add_heading("14. DISPOSIÇÕES FINAIS (ART. 115, VII, DO RLC)") — mantendo o texto atual 'Responsável(is) pelo estudo — Área Demandante' como um subtítulo/rótulo opcional abaixo do heading numerado, se esse texto descritivo for desejado, mas garantindo que exista um título "14." no documento correspondendo ao id "14" do formulário. Também revisar o comentário do topo do arquivo (linha 3: "Estrutura de 13 seções") para refletir as 14 seções reais.
+
+=== Nota Técnica ===
+[ALTA] A seção 14 do formulário ("DA NATUREZA DO OBJETO PARA FINS DO ART. 123 DO RLC") não gera nenhum título "14." no .docx; o documento pula de "13. IDENTIFICAÇÃO DA MODALIDADE..." direto para um heading "14. ADEQUAÇÃO TÉCNICA", que na verdade corresponde à seção 15 do schema.
+Area: Numeração de seções
+Detalhe: Em js/dados-nota-tecnica.js (linhas 83-89) a seção id "14" contém o campo NT_ObraServicoEngenharia (pergunta "O objeto desta contratação é obra ou serviço de engenharia?"), que serve apenas como gate (mostrarSe/blocosAdicionais) para as seções seguintes — não tem heading próprio no template Python. Em templates/build_template_nota_tecnica.py, depois de "13. IDENTIFICAÇÃO DA MODALIDADE..." (linha 147) o gerador abre a sentinela do bloco condicional (linha 158) e vai direto para add_heading("14. ADEQUAÇÃO TÉCNICA...") (linha 160), que no schema é NT15_AdequacaoTecnica (id "15", linha 90-95 do js). O mesmo desalinhamento se repete em cascata: docx "15. FUNCIONALIDADE" (py linha 163) = schema id "16" (js linha 96); docx "16. REQUISITOS AMBIENTAIS" (py linha 166) = schema id "17" (js linha 102); docx "17. ADEQUAÇÃO ÀS NORMAS VIGENTES" (py linha 169) = schema id "18" (js linha 108). Ou seja, a partir da seção 14 do formulário, todo número de título gerado no .docx está um número atrás do id da seção correspondente no schema — exatamente o mesmo padrão de bug (b) já identificado anteriormente neste projeto, e ainda presente no estado atual do código.
+Localizacao: templates/build_template_nota_tecnica.py:158-172 (headings 14-17) vs js/dados-nota-tecnica.js:83-113 (ids 14-18)
+Sugestao: Inserir, antes da sentinela add_bloco_variante_sentinela_inicio (py linha 158), um add_heading("14. DA NATUREZA DO OBJETO PARA FINS DO ART. 123 DO RLC") com o bookmark de NT_ObraServicoEngenharia, e renumerar os headings seguintes para "15. ADEQUAÇÃO TÉCNICA", "16. FUNCIONALIDADE", "17. REQUISITOS AMBIENTAIS", "18. ADEQUAÇÃO ÀS NORMAS VIGENTES", de modo que cada número de heading no .docx volte a bater 1:1 com o id da seção em js/dados-nota-tecnica.js.
+
+[MEDIA] A resposta da seção 14 (NT_ObraServicoEngenharia: "O objeto é obra ou serviço de engenharia? Sim/Não") nunca é impressa no .docx — não existe nenhum bookmarkStart/bookmarkEnd para NT_ObraServicoEngenharia em build_template_nota_tecnica.py.
+Area: Campo sem bookmark no documento gerado
+Detalhe: Ao contrário dos demais campos tipo "parametro"/select do schema (NT08_Parcelamento, NT10_AdequacaoAmbiente, NT11_ContratacoesCorrelatas, NT12_Viabilidade), que usam add_bloco_variante para gravar a resposta escolhida como texto no documento (ex.: py linhas 117-120, 127-130, 134-137, 141-144), o campo NT_ObraServicoEngenharia (js linhas 84-88) é usado somente como condição (mostrarSe) e para abrir/fechar o bloco condicional das seções de engenharia, mas seu valor Sim/Não em si nunca aparece como texto declarativo no corpo da Nota Técnica gerada — busquei "NT_ObraServicoEngenharia" em templates/build_template_nota_tecnica.py e não há nenhuma ocorrência.
+Localizacao: js/dados-nota-tecnica.js:83-89 (campo NT_ObraServicoEngenharia) — ausente em templates/build_template_nota_tecnica.py
+Sugestao: Ao criar o heading "14. DA NATUREZA DO OBJETO PARA FINS DO ART. 123 DO RLC" sugerido no achado anterior, adicionar também um add_bloco_variante("NT_ObraServicoEngenharia", {"Sim": [...], "Não": [...]}) análogo aos demais campos select, para que a declaração expressa sobre a natureza do objeto conste no corpo do documento, e não apenas controle a visibilidade condicional de outras seções.
+
+[MEDIA] A seção 19 do schema ("DISPOSIÇÕES FINAIS") não gera nenhum título "19." (nem "18.") no .docx; o heading correspondente é "Responsável(is) pelo estudo — Área Técnica", sem número e com título diferente do formulário.
+Area: Título divergente e seção sem número
+Detalhe: Em js/dados-nota-tecnica.js (linha 114), a seção id "19" tem titulo "DISPOSIÇÕES FINAIS" e contém os campos NT19_ResponsavelNome e NT19_ResponsavelCargo. Em templates/build_template_nota_tecnica.py (linha 174), o heading correspondente é apenas "Responsável(is) pelo estudo — Área Técnica", sem prefixo numérico e sem citação de artigo do RLC, ao contrário de todas as outras 18 seções do documento. Isso quebra o padrão de numeração sequencial do documento (a última seção efetivamente numerada visível é "17.") e cria uma divergência de rótulo entre o que a usuária vê no formulário ("Disposições Finais") e o que é impresso no documento final ("Responsável(is) pelo estudo").
+Localizacao: templates/build_template_nota_tecnica.py:174 vs js/dados-nota-tecnica.js:114-119
+Sugestao: Alinhar os dois lados: renomear o heading em build_template_nota_tecnica.py para incluir o número de seção sequencial correto (ex.: "18. DISPOSIÇÕES FINAIS" ou "19. DISPOSIÇÕES FINAIS", dependendo da correção do achado 1) mantendo referência a "Responsável(is) pelo estudo" como subtítulo, OU renomear o titulo da seção 19 em js/dados-nota-tecnica.js de "DISPOSIÇÕES FINAIS" para "RESPONSÁVEL(IS) PELO ESTUDO" para refletir fielmente o que é gerado no documento.
+
+##### fase2_obrigacoes #####
+=== TR-Bens ===
+[ALTA] O texto gerado funde as 6 alíneas (a-f) da minuta-fonte em um único parágrafo corrido e omite completamente o item 9.2, que é a cláusula de proteção da Conab (isenção de responsabilidade por atos da Contratada perante terceiros).
+Area: TR-Bens - Seção 9. DAS OBRIGAÇÕES DA CONTRATANTE
+Detalhe: Na minuta-fonte (SEI_55379667), a Seção 9 tem: 9.1 com alíneas a) a f) totalmente redigidas (não resumidas) e 9.2, um parágrafo autônomo e juridicamente relevante que isenta a Conab de responder por compromissos da Contratada com terceiros e por danos a terceiros causados por atos da Contratada, seus empregados, prepostos ou subordinados. No template atual (build_template_tr_bens.py, linhas 344-350), tudo foi comprimido em um único doc.add_paragraph com frases telegráficas ('receber o objeto...; verificar a conformidade...; comunicar...; rejeitar...; acompanhar e fiscalizar...; efetuar o pagamento...') e o item 9.2 foi inteiramente suprimido — uma perda real de conteúdo de proteção jurídica da Conab.
+Localizacao: templates/build_template_tr_bens.py, linhas 344-350
+Sugestao: # 9. DAS OBRIGAÇÕES DA CONTRATANTE (texto fixo)
+add_heading("9. DAS OBRIGAÇÕES DA CONTRATANTE")
+doc.add_paragraph("9.1. São obrigações da Contratante:")
+doc.add_paragraph(
+    "a) receber o objeto no prazo e condições estabelecidas no Edital e seus anexos;")
+doc.add_paragraph(
+    "b) verificar minuciosamente, no prazo fixado, a conformidade dos bens recebidos "
+    "provisoriamente com as especificações constantes do Edital e seus anexos e da proposta, "
+    "para fins de aceitação e recebimento definitivo;")
+doc.add_paragraph(
+    "c) comunicar à Contratada, por escrito, sobre imperfeições, falhas ou irregularidades "
+    "verificadas no objeto fornecido, para que seja substituído, reparado ou corrigido;")
+doc.add_paragraph(
+    "d) rejeitar, no todo ou em parte, fornecimento de bens executado em desacordo com o "
+    "previsto neste Termo de Referência;")
+doc.add_paragraph(
+    "e) acompanhar e fiscalizar o cumprimento das obrigações da Contratada, através de "
+    "empregado ou comissão especialmente designados;")
+doc.add_paragraph(
+    "f) efetuar o pagamento à Contratada no valor correspondente ao fornecimento do objeto, "
+    "no prazo e forma estabelecidos no Edital e seus anexos.")
+doc.add_paragraph(
+    "9.2. A Conab não responderá por quaisquer compromissos assumidos pela Contratada com "
+    "terceiros, ainda que vinculados à execução do Contrato, bem como por qualquer dano "
+    "causado a terceiros em decorrência de ato da Contratada, de seus empregados, prepostos "
+    "ou subordinados.")
+
+
+[ALTA] O texto gerado funde as alíneas a) a g) da minuta-fonte em um único parágrafo resumido e sem o sub-item a.1) (obrigação de acompanhar o objeto com manual do usuário em português e relação da rede de assistência técnica autorizada), mantendo apenas h) isolado como campo editável.
+Area: TR-Bens - Seção 10. DAS OBRIGAÇÕES DA CONTRATADA
+Detalhe: A minuta-fonte detalha, em alíneas completas, a) entrega em perfeitas condições com nota fiscal indicando marca/fabricante/modelo/procedência/prazo de garantia — com sub-item a.1) sobre manual do usuário em português e rede de assistência técnica autorizada; b) responsabilização pelos vícios e danos do objeto conforme arts. 12, 13 e 17 a 27 do CDC (citação específica de lei, hoje ausente); c) substituir/reparar/corrigir às suas expensas; d) comunicar impossibilidade de cumprir prazo com antecedência mínima de 24 horas (prazo específico, hoje ausente); e) manter condições de habilitação; f) prestar esclarecimentos; g) indicar preposto. O template atual (linhas 352-358) resume tudo em uma frase corrida, perdendo a citação legal do CDC, o prazo de 24 horas de antecedência para comunicação de atraso, e o sub-item a.1 sobre manual do usuário/assistência técnica.
+Localizacao: templates/build_template_tr_bens.py, linhas 352-367
+Sugestao: # 10. DAS OBRIGAÇÕES DA CONTRATADA
+add_heading("10. DAS OBRIGAÇÕES DA CONTRATADA")
+doc.add_paragraph(
+    "10.1. A Contratada deve cumprir todas as obrigações constantes neste Termo, seus anexos "
+    "e sua proposta, assumindo como exclusivamente seus os riscos e as despesas decorrentes "
+    "da boa e perfeita execução do objeto e, ainda:")
+doc.add_paragraph(
+    "a) efetuar a entrega do objeto em perfeitas condições, conforme especificações, prazo e "
+    "local constantes neste Termo e seus anexos, acompanhado da respectiva nota fiscal, na "
+    "qual constarão as indicações referentes a: marca, fabricante, modelo, procedência e "
+    "prazo de garantia ou validade;")
+doc.add_paragraph(
+    "a.1) O objeto deve estar acompanhado do manual do usuário, com uma versão em português "
+    "e da relação da rede de assistência técnica autorizada;")
+doc.add_paragraph(
+    "b) responsabilizar-se pelos vícios e danos decorrentes do objeto, de acordo com os art. "
+    "12, 13 e 17 a 27, do Código de Defesa do Consumidor (Lei nº 8.078, de 1990);")
+doc.add_paragraph(
+    "c) substituir, reparar ou corrigir, às suas expensas, no prazo fixado neste Termo de "
+    "Referência, o objeto com avarias ou defeitos;")
+doc.add_paragraph(
+    "d) comunicar à Contratante, no prazo máximo de 24 (vinte e quatro) horas que antecede a "
+    "data da entrega, os motivos que impossibilitem o cumprimento do prazo previsto, com a "
+    "devida comprovação;")
+doc.add_paragraph(
+    "e) manter, durante toda a execução do contrato, em compatibilidade com as obrigações "
+    "assumidas, todas as condições de habilitação e qualificação exigidas na licitação;")
+doc.add_paragraph(
+    "f) prestar todos os esclarecimentos que forem solicitados pela Conab, durante a "
+    "realização do Contrato;")
+doc.add_paragraph("g) indicar preposto para representá-la durante a execução do contrato;")
+doc.add_paragraph(
+    "Garantir aos seus empregados, na execução do Contrato, política de respeito à "
+    "diversidade, prevenção a práticas discriminatórias e alinhamento com os princípios "
+    "institucionais de equidade de gênero e raça.")
+add_paragraph_with_bookmarks([
+    "h) comprovar a implementação do Programa de Integridade, nos moldes do art. 603 e "
+    "Anexo XXXII do RLC, no prazo de até ", ("S10_PrazoProgramaIntegridadeMeses", "____"),
+    " meses após a assinatura do contrato.",
+])
+
+
+=== TR-Serviços ===
+[ALTA] A seção 9 foi comprimida em um único parágrafo de prosa corrida e perdeu inteiramente a cláusula 9.2 de isenção de responsabilidade da Conab por atos da Contratada com terceiros.
+Area: TR-Serviços — Seção 9 (DAS OBRIGAÇÕES DA CONTRATANTE)
+Detalhe: A minuta-fonte traz a cláusula 9.1 com 7 alíneas completas (a) a g), cada uma com texto próprio) e, em seguida, a cláusula 9.2, um parágrafo de proteção institucional: 'A Conab não responderá por quaisquer compromissos assumidos pela Contratada com terceiros, ainda que vinculados à execução do Contrato, bem como por qualquer dano causado a terceiros em decorrência de ato da Contratada, de seus empregados, prepostos ou subordinados.' No template atual (build_template_tr_servicos.py, linhas 439-446), tudo isso foi resumido em uma única frase corrida dentro de doc.add_paragraph(), e a cláusula 9.2 (isenção de responsabilidade por atos de terceiros) foi omitida por completo — exatamente o mesmo padrão de perda já identificado no TR-Bens.
+Localizacao: templates/build_template_tr_servicos.py, linhas 439-446 (bloco '# 9. DAS OBRIGAÇÕES DA CONTRATANTE (texto fixo)')
+Sugestao: # 9. DAS OBRIGAÇÕES DA CONTRATANTE (texto fixo)
+add_heading("9. DAS OBRIGAÇÕES DA CONTRATANTE")
+doc.add_paragraph("9.1. São obrigações da Contratante:")
+doc.add_paragraph(
+    "a) exigir o cumprimento de todas as obrigações assumidas pela Contratada, de acordo "
+    "com as cláusulas contratuais e os termos de sua proposta;")
+doc.add_paragraph(
+    "b) receber o objeto no prazo e condições estabelecidas no Edital e seus anexos;")
+doc.add_paragraph(
+    "c) verificar minuciosamente, no prazo fixado, a conformidade dos serviços recebidos "
+    "provisoriamente com as especificações constantes do Edital e da proposta, para fins de "
+    "aceitação e recebimento definitivo;")
+doc.add_paragraph(
+    "d) comunicar à Contratada, por escrito, sobre imperfeições, falhas ou irregularidades "
+    "verificadas no curso da execução dos serviços, para que seja reparado ou corrigido;")
+doc.add_paragraph(
+    "e) rejeitar, no todo ou em parte, serviço executado em desacordo com o previsto neste "
+    "Termo de Referência;")
+doc.add_paragraph(
+    "f) acompanhar e fiscalizar o cumprimento das obrigações da Contratada, através de "
+    "empregado ou comissão especialmente designado;")
+doc.add_paragraph(
+    "g) efetuar o pagamento à Contratada no valor correspondente a prestação de serviço, no "
+    "prazo e forma estabelecidos no Edital e seus anexos.")
+doc.add_paragraph(
+    "9.2. A Conab não responderá por quaisquer compromissos assumidos pela Contratada com "
+    "terceiros, ainda que vinculados à execução do Contrato, bem como por qualquer dano "
+    "causado a terceiros em decorrência de ato da Contratada, de seus empregados, prepostos "
+    "ou subordinados.")
+
+[ALTA] O caput 10.1 fundiu as alíneas a) a r) (17 itens) em um único parágrafo de prosa corrida, perdendo o formato de alíneas e reduzindo/eliminando detalhes de itens como a letra m) (proteção ao trabalho do menor) e a letra t) (instalações/aparelhamento/pessoal técnico).
+Area: TR-Serviços — Seção 10 (DAS OBRIGAÇÕES DA CONTRATADA)
+Detalhe: Na minuta-fonte, a cláusula 10.1 é seguida de 20 alíneas completas (a) a t), mais os itens t.1, u, u.1, v, v.1, v.2 e w tratados condicionalmente). No template atual (linhas 450-463), apenas um parágrafo de prosa resume as alíneas a) a t): por exemplo, a letra m) na fonte diz 'não permitir a utilização de qualquer trabalho do menor de dezesseis anos, exceto na condição de aprendiz para os maiores de quatorze anos; nem permitir a utilização do trabalho do menor de dezoito anos em trabalho noturno, perigoso ou insalubre', mas no template vira apenas 'não permitir trabalho de menores' — perdendo a idade limite, a exceção de aprendiz e a vedação específica a trabalho noturno/perigoso/insalubre. A letra t) 'deter instalações, aparelhamento e pessoal técnico adequados e disponíveis para a realização do objeto da licitação' também só aparece embutida na prosa, sem alínea própria, diferente do restante da seção que já usa parágrafos e bookmarks individuais (ex.: letra s) sobre Programa de Integridade, já corretamente separada nas linhas 479-483). O restante da seção (letras u, v, w) já está corretamente detalhado em add_bloco_variante, então a correção abaixo cobre apenas o caput 10.1 e as alíneas a) a t), substituindo o parágrafo único de prosa.
+Localizacao: templates/build_template_tr_servicos.py, linhas 450-463 (parágrafo único de prosa do item 10.1, dentro do bloco '# 10. DAS OBRIGAÇÕES DA CONTRATADA')
+Sugestao: doc.add_paragraph(
+    "10.1. A Contratada deve cumprir todas as obrigações constantes neste Termo, seus anexos "
+    "e sua proposta, assumindo como exclusivamente seus os riscos e as despesas decorrentes da "
+    "boa e perfeita execução do objeto e, ainda:")
+doc.add_paragraph(
+    "a) executar os serviços conforme especificações deste Termo de Referência e de sua "
+    "proposta, com a alocação dos empregados necessários ao perfeito cumprimento das "
+    "cláusulas contratuais, além de fornecer os materiais e equipamentos, ferramentas e "
+    "utensílios necessários, na qualidade e quantidade especificadas neste Termo de "
+    "Referência e em sua proposta;")
+doc.add_paragraph(
+    "b) responsabilizar-se pelos vícios e danos decorrentes do objeto, de acordo com os arts. "
+    "12, 13 e 17 a 27, do Código de Defesa do Consumidor (Lei nº 8.078, de 1990);")
+doc.add_paragraph(
+    "c) substituir, reparar, remover ou corrigir, às suas expensas, no total ou em parte, no "
+    "prazo estipulado pela fiscalização, os serviços efetuados em que se verificarem vícios, "
+    "defeitos ou incorreções resultantes da execução ou dos materiais empregados;")
+doc.add_paragraph(
+    "d) comunicar à Contratante, no prazo máximo de 24 (vinte e quatro) horas que antecede a "
+    "data da finalização dos serviços, os motivos que impossibilitem o cumprimento do prazo "
+    "previsto, com a devida comprovação;")
+doc.add_paragraph(
+    "e) utilizar empregados habilitados e com conhecimentos básicos dos serviços a serem "
+    "executados, em conformidade com as normas e determinações em vigor;")
+doc.add_paragraph(
+    "f) apresentar os empregados devidamente uniformizados e identificados por meio de "
+    "crachá, além de provê-los com os Equipamentos de Proteção Individual - EPI, quando for "
+    "o caso;")
+doc.add_paragraph(
+    "g) apresentar à Contratante, quando for o caso, a relação nominal dos empregados que "
+    "adentrarão a Conab para a execução do serviço;")
+doc.add_paragraph(
+    "h) responsabilizar-se por todas as obrigações trabalhistas, sociais, previdenciárias, "
+    "tributárias e as demais previstas na legislação específica, cuja inadimplência não "
+    "transfere responsabilidade à Contratante;")
+doc.add_paragraph(
+    "i) atender as solicitações da Contratante quanto à substituição dos empregados "
+    "alocados, no prazo fixado pelo fiscal do Contrato, nos casos em que ficar constatado "
+    "descumprimento das obrigações relativas à execução do serviço, conforme descrito neste "
+    "Termo de Referência;")
+doc.add_paragraph(
+    "j) instruir seus empregados quanto à necessidade de acatar as normas internas da "
+    "Conab;")
+doc.add_paragraph(
+    "k) instruir seus empregados a respeito das atividades a serem desempenhadas, "
+    "alertando-os a não executar atividades não abrangidas pelo Contrato, devendo a "
+    "Contratada relatar à Contratante toda e qualquer ocorrência neste sentido, a fim de "
+    "evitar desvio de função;")
+doc.add_paragraph(
+    "l) relatar à Contratante toda e qualquer irregularidade verificada no decorrer da "
+    "prestação dos serviços;")
+doc.add_paragraph(
+    "m) não permitir a utilização de qualquer trabalho do menor de dezesseis anos, exceto na "
+    "condição de aprendiz para os maiores de quatorze anos; nem permitir a utilização do "
+    "trabalho do menor de dezoito anos em trabalho noturno, perigoso ou insalubre;")
+doc.add_paragraph(
+    "n) guardar sigilo sobre todas as informações obtidas em decorrência do cumprimento do "
+    "Contrato;")
+doc.add_paragraph(
+    "o) arcar com o ônus decorrente de eventual equívoco no dimensionamento dos "
+    "quantitativos de sua proposta, devendo complementá-los, caso o previsto inicialmente em "
+    "sua proposta não seja satisfatório para o atendimento ao objeto da licitação, exceto "
+    "quando ocorrer algum dos eventos arrolados no Art. 497 do RLC da Conab;")
+doc.add_paragraph(
+    "p) manter, durante toda a execução do Contrato, em compatibilidade com as obrigações "
+    "assumidas, todas as condições de habilitação e qualificação exigidas na licitação;")
+doc.add_paragraph(
+    "q) prestar todos os esclarecimentos que forem solicitados pela Conab, durante a "
+    "realização do Contrato;")
+doc.add_paragraph(
+    "r) indicar preposto para representá-la durante a execução do Contrato;")
+doc.add_paragraph(
+    "t) deter instalações, aparelhamento e pessoal técnico adequados e disponíveis para a "
+    "realização do objeto da licitação.")
+doc.add_paragraph(
+    "Garantir aos seus empregados, na execução do Contrato, política de respeito à "
+    "diversidade, prevenção a práticas discriminatórias e alinhamento com os princípios "
+    "institucionais de equidade de gênero e raça.")
+
+=== TR-Dispensa ===
+[ALTA] As 7 alíneas (a–g) da minuta-fonte foram comprimidas em um único parágrafo de prosa corrida, perdendo a estrutura formal em alíneas e deixando a frase de isenção de responsabilidade da Conab (danos a terceiros causados pela Contratada) como um apêndice truncado da mesma frase.
+Area: TR-Dispensa — Seção 10. DAS OBRIGAÇÕES DA CONTRATANTE
+Detalhe: Na fonte (SEI_55379661, seção '10. DAS OBRIGAÇÕES DA CONTRATANTE', linhas 768-787 do texto extraído) há: (1) frase introdutória 'São obrigações da Contratante:'; (2) 7 alíneas completas a) a g) — exigir cumprimento das obrigações da Contratada, receber o objeto no prazo, verificar minuciosamente a conformidade, comunicar por escrito imperfeições/falhas, rejeitar serviço em desacordo, acompanhar/fiscalizar por empregado ou comissão designados, efetuar o pagamento; (3) um parágrafo autônomo (item 11 da fonte, fora das alíneas) de proteção jurídica à Conab: isenção de responsabilidade por compromissos da Contratada com terceiros E por danos a terceiros causados por atos da Contratada/empregados/prepostos/subordinados. No código atual (build_template_tr_dispensa.py, linhas 516-524) tudo isso vira um único doc.add_paragraph('10.1. ...') em prosa corrida; a cláusula de isenção de responsabilidade aparece resumida ('não responderá por compromissos... com terceiros') e OMITE completamente a segunda parte — a isenção por danos causados a terceiros por atos da Contratada/empregados/prepostos/subordinados —, que é justamente a proteção mais relevante à Conab.
+Localizacao: templates/build_template_tr_dispensa.py, linhas 516-524 (seção '10. DAS OBRIGAÇÕES DA CONTRATANTE')
+Sugestao: Substituir as linhas 516-524 por:
+
+# 10. DAS OBRIGAÇÕES DA CONTRATANTE (texto fixo)
+add_heading("10. DAS OBRIGAÇÕES DA CONTRATANTE")
+doc.add_paragraph("10.1. São obrigações da Contratante:")
+doc.add_paragraph(
+    "a) exigir o cumprimento de todas as obrigações assumidas pela Contratada, de acordo com as "
+    "cláusulas contratuais e os termos de sua proposta;")
+doc.add_paragraph(
+    "b) receber o objeto no prazo e condições estabelecidas neste Termo de Referência e seus "
+    "anexos;")
+doc.add_paragraph(
+    "c) verificar minuciosamente, no prazo fixado, a conformidade dos serviços recebidos "
+    "provisoriamente com as especificações constantes neste Termo de Referência e da proposta, "
+    "para fins de aceitação e recebimento definitivo;")
+doc.add_paragraph(
+    "d) comunicar à Contratada, por escrito, sobre imperfeições, falhas ou irregularidades "
+    "verificadas no curso da execução dos serviços, para que seja reparado ou corrigido;")
+doc.add_paragraph(
+    "e) rejeitar, no todo ou em parte, serviço executado em desacordo com o previsto neste Termo "
+    "de Referência;")
+doc.add_paragraph(
+    "f) acompanhar e fiscalizar o cumprimento das obrigações da Contratada, através de empregado "
+    "ou comissão especialmente designados;")
+doc.add_paragraph(
+    "g) efetuar o pagamento à Contratada no valor correspondente à prestação de serviço, no "
+    "prazo e forma estabelecidos neste Termo de Referência e seus anexos.")
+doc.add_paragraph(
+    "10.2. A Conab não responderá por quaisquer compromissos assumidos pela Contratada com "
+    "terceiros, ainda que vinculados à execução do Contrato, bem como por qualquer dano causado "
+    "a terceiros em decorrência de ato da Contratada, de seus empregados, prepostos ou "
+    "subordinados.")
+
+[ALTA] As 18 alíneas (a–r) mais o item 2 (instalações/pessoal técnico) da minuta-fonte foram comprimidos em um único parágrafo de prosa corrida no código gerado, e a alínea g) — apresentar à Contratante a relação nominal dos empregados que adentrarão a Conab — foi omitida por completo; a exceção do Art. 497 do RLC (item o) também não aparece.
+Area: TR-Dispensa — Seção 11. DAS OBRIGAÇÕES DA CONTRATADA
+Detalhe: Na fonte (seção '11. DAS OBRIGAÇÕES DA CONTRATADA', linhas 789-841 do texto extraído) há a frase introdutória seguida de 18 alíneas completas a) a r), mais um item numerado separado 'Deter instalações, aparelhamento e pessoal técnico adequados...'. No código atual (linhas 526-540) todo esse conteúdo é reduzido a um parágrafo único ('11.1. ...') que: (1) funde e resume itens, perdendo detalhes normativos como os artigos exatos do CDC (12, 13, 17 a 27) — presentes só como '(CDC)' —, o prazo 'estabelecido pela Conab' na alínea c), e a ressalva completa da alínea k) sobre 'não executar atividades não abrangidas pelo Contrato... a fim de evitar desvio de função'; (2) OMITE inteiramente a alínea g) da fonte ('apresentar à Contratante, quando for o caso, a relação nominal dos empregados que adentrarão a Conab para a execução do serviço'); (3) omite a exceção da alínea o) ('exceto quando ocorrer algum dos eventos arrolados no Art. 497 do RLC da Conab'), que limita a responsabilidade da Contratada por equívocos de dimensionamento — proteção que também favorece a Contratada/reduz risco de disputa indevida.
+Localizacao: templates/build_template_tr_dispensa.py, linhas 526-544 (seção '11. DAS OBRIGAÇÕES DA CONTRATADA', antes do bloco add_bloco_variante('S11_NaturezaIntelectual', ...) que permanece inalterado)
+Sugestao: Substituir as linhas 526-544 (do add_heading até o parágrafo 'Garantir aos seus empregados...', mantendo o add_bloco_variante('S11_NaturezaIntelectual', ...) logo em seguida sem alterações) por:
+
+# 11. DAS OBRIGAÇÕES DA CONTRATADA
+add_heading("11. DAS OBRIGAÇÕES DA CONTRATADA")
+doc.add_paragraph(
+    "11.1. A Contratada deve cumprir todas as obrigações constantes neste Termo, seus anexos e "
+    "sua proposta, assumindo como exclusivamente seus os riscos e as despesas decorrentes da boa "
+    "e perfeita execução do objeto e, ainda:")
+doc.add_paragraph(
+    "a) executar os serviços conforme especificações deste Termo de Referência e de sua "
+    "proposta, com a alocação dos empregados necessários ao perfeito cumprimento das cláusulas "
+    "contratuais, além de fornecer os materiais e equipamentos, ferramentas e utensílios "
+    "necessários, na qualidade e quantidade especificadas neste Termo de Referência e em sua "
+    "proposta;")
+doc.add_paragraph(
+    "b) responsabilizar-se pelos vícios e danos decorrentes do objeto, de acordo com os artigos "
+    "12, 13 e 17 a 27, do Código de Defesa do Consumidor (Lei nº 8.078, de 1990);")
+doc.add_paragraph(
+    "c) substituir, reparar, remover ou corrigir, às suas expensas, no total ou em parte, no "
+    "prazo estabelecido pela Conab, os serviços efetuados em que se verificarem vícios, defeitos "
+    "ou incorreções resultantes da execução ou dos materiais empregados;")
+doc.add_paragraph(
+    "d) comunicar à Contratante, no prazo máximo de 24 (vinte e quatro) horas que antecede a "
+    "data da finalização dos serviços, os motivos que impossibilitem o cumprimento do prazo "
+    "previsto, com a devida comprovação;")
+doc.add_paragraph(
+    "e) utilizar empregados habilitados e com conhecimentos básicos dos serviços a serem "
+    "executados, em conformidade com as normas e determinações em vigor;")
+doc.add_paragraph(
+    "f) apresentar os empregados devidamente uniformizados e identificados por meio de crachá, "
+    "além de provê-los com os Equipamentos de Proteção Individual - EPI, quando for o caso;")
+doc.add_paragraph(
+    "g) apresentar à Contratante, quando for o caso, a relação nominal dos empregados que "
+    "adentrarão a Conab para a execução do serviço;")
+doc.add_paragraph(
+    "h) responsabilizar-se por todas as obrigações trabalhistas, sociais, previdenciárias, "
+    "tributárias e as demais previstas na legislação específica, cuja inadimplência não "
+    "transfere responsabilidade à Contratante;")
+doc.add_paragraph(
+    "i) atender as solicitações da Contratante quanto à substituição dos empregados alocados, no "
+    "prazo fixado pelo fiscal do Contrato, nos casos em que ficar constatado descumprimento das "
+    "obrigações relativas à execução do serviço, conforme descrito neste Termo de Referência;")
+doc.add_paragraph(
+    "j) instruir seus empregados quanto à necessidade de acatar as normas internas da Conab;")
+doc.add_paragraph(
+    "k) instruir seus empregados a respeito das atividades a serem desempenhadas, alertando-os a "
+    "não executar atividades não abrangidas pelo Contrato, devendo a Contratada relatar à "
+    "Contratante toda e qualquer ocorrência neste sentido, a fim de evitar desvio de função;")
+doc.add_paragraph(
+    "l) relatar à Contratante toda e qualquer irregularidade verificada no decorrer da prestação "
+    "dos serviços;")
+doc.add_paragraph(
+    "m) não permitir a utilização de qualquer trabalho do menor de dezesseis anos, exceto na "
+    "condição de aprendiz para os maiores de quatorze anos; nem permitir a utilização do "
+    "trabalho do menor de dezoito anos em trabalho noturno, perigoso ou insalubre;")
+doc.add_paragraph(
+    "n) guardar sigilo sobre todas as informações obtidas em decorrência do cumprimento do "
+    "Contrato;")
+doc.add_paragraph(
+    "o) arcar com o ônus decorrente de eventual equívoco no dimensionamento dos quantitativos de "
+    "sua proposta, devendo complementá-los, caso o previsto inicialmente em sua proposta não "
+    "seja satisfatório para o atendimento ao objeto da contratação, exceto quando ocorrer algum "
+    "dos eventos arrolados no Art. 497 do RLC da Conab;")
+doc.add_paragraph(
+    "p) manter, durante toda a execução do Contrato, em compatibilidade com as obrigações "
+    "assumidas, todas as condições de habilitação e qualificação exigidas na contratação;")
+doc.add_paragraph(
+    "q) prestar todos os esclarecimentos que forem solicitados pela Conab, durante a realização "
+    "do Contrato;")
+doc.add_paragraph(
+    "r) indicar preposto para representá-la durante a execução do Contrato;")
+doc.add_paragraph(
+    "s) deter instalações, aparelhamento e pessoal técnico adequados e disponíveis para a "
+    "realização do objeto da contratação.")
+doc.add_paragraph(
+    "Garantir aos seus empregados, na execução do Contrato, política de respeito à "
+    "diversidade, prevenção a práticas discriminatórias e alinhamento com os princípios "
+    "institucionais de equidade de gênero e raça.")
+
+=== PB ===
+[ALTA] As 8 alíneas (a-h) da fonte foram comprimidas em um único parágrafo de prosa corrida, perdendo a estrutura formal e enfraquecendo a força jurídica de cada obrigação individual.
+Area: PB - DAS OBRIGAÇÕES DA CONTRATANTE
+Detalhe: Na minuta-fonte (SEI 54953323), a Seção 17 traz 8 alíneas completas (a) a h)) listando as obrigações da Contratante, incluindo a alínea 'h' que combina a proibição de ingerência com a obrigação de providenciar as ART dos empregados da Conab responsáveis pela supervisão. No build_template_pb.py (linhas 452-464), tudo isso foi fundido em um único parágrafo 17.1 de prosa corrida, sem estrutura de alíneas. O parágrafo de proteção à Conab (isenção de responsabilidade por compromissos da Contratada com terceiros) já está presente como 17.2, mas a estrutura em alíneas foi perdida, dificultando referência cruzada, negociação e leitura jurídica formal do documento (praxe de instrumentos contratuais da Conab).
+Localizacao: templates/build_template_pb.py, linhas 452-464
+Sugestao: # 17. DAS OBRIGAÇÕES DA CONTRATANTE
+add_heading("17. DAS OBRIGAÇÕES DA CONTRATANTE (ART. 157, XVI, RLC)")
+doc.add_paragraph("17.1. São obrigações da Contratante:")
+doc.add_paragraph("a) exigir o cumprimento de todas as obrigações assumidas pela Contratada, conforme as cláusulas contratuais e os termos da proposta;")
+doc.add_paragraph("b) receber o objeto no prazo e nas condições estabelecidas;")
+doc.add_paragraph("c) verificar minuciosamente, no prazo fixado, a conformidade dos serviços recebidos provisoriamente, para fins de aceitação e recebimento definitivo;")
+doc.add_paragraph("d) comunicar à Contratada, por escrito, imperfeições, falhas ou irregularidades, para reparo ou correção;")
+doc.add_paragraph("e) rejeitar, no todo ou em parte, serviço executado em desacordo com este Projeto Básico;")
+doc.add_paragraph("f) acompanhar e fiscalizar a execução por meio de empregado ou comissão designados;")
+doc.add_paragraph("g) efetuar o pagamento no prazo e na forma estabelecidos;")
+doc.add_paragraph("h) não praticar atos de ingerência na administração da Contratada (poder de mando sobre empregados, direcionamento de contratações, desvio de função, etc.); e providenciar as ART dos empregados da Conab responsáveis pela supervisão e fiscalização, arcando com os respectivos custos.")
+doc.add_paragraph("17.2. A Conab não responderá por compromissos assumidos pela Contratada com terceiros, ainda que vinculados à execução do Contrato.")
+
+[ALTA] As 16 alíneas (a-p) da fonte, incluindo obrigações trabalhistas e de vedação ao trabalho infantil, foram comprimidas em um único parágrafo de prosa corrida no lugar de alíneas individuais.
+Area: PB - DAS OBRIGAÇÕES DA CONTRATADA
+Detalhe: Na fonte, a Seção 18 traz 16 alíneas completas (a) a p)), abrangendo desde apresentação de ART/RRT até a política de diversidade (alínea p). No build_template_pb.py (linhas 466-488), o conteúdo das alíneas a-o foi comprimido em um único parágrafo de prosa (18.1) via add_paragraph_with_bookmarks, e a alínea 'p' (política de diversidade) foi destacada como parágrafo solto sem numeração/letra, sem vínculo claro com o item 18.1. A estrutura de alíneas letradas foi perdida, o que reduz a clareza jurídica e a rastreabilidade de cada obrigação específica da Contratada.
+Localizacao: templates/build_template_pb.py, linhas 466-488
+Sugestao: # 18. DAS OBRIGAÇÕES DA CONTRATADA
+add_heading("18. DAS OBRIGAÇÕES DA CONTRATADA (ART. 157, XVII, RLC)")
+add_paragraph_with_bookmarks([
+    "18.1. A Contratada deve cumprir todas as obrigações constantes neste Projeto, seus "
+    "Anexos e sua proposta, assumindo como exclusivamente seus os riscos e as despesas "
+    "decorrentes da boa e perfeita execução do objeto, e ainda:"
+])
+add_paragraph_with_bookmarks([
+    "a) apresentar as ART/RRT registradas no CREA/CAU em até ", ("PB18_PrazoARTContratoDias", "____"),
+    " dias corridos da assinatura do Contrato;",
+])
+doc.add_paragraph("b) executar os serviços conforme este Projeto Básico e sua proposta, com a alocação dos profissionais necessários;")
+doc.add_paragraph("c) iniciar os serviços somente após o recebimento da Ordem de Serviço emitida pela Conab;")
+doc.add_paragraph("d) seguir o Cronograma Físico-Financeiro, comunicando imediatamente qualquer impossibilidade de cumprimento;")
+doc.add_paragraph("e) responsabilizar-se pelos vícios e danos decorrentes da execução, na forma da legislação aplicável;")
+doc.add_paragraph("f) proteger adequadamente os bens da Conab no local e restituí-los ao término;")
+doc.add_paragraph("g) submeter à aprovação prévia da Conab toda substituição de materiais e equipamentos de referência;")
+doc.add_paragraph("h) manter sigilo sobre assuntos de interesse da Conab ou de terceiros acessados na execução;")
+doc.add_paragraph("i) manter, durante toda a execução, as condições de habilitação e qualificação exigidas, inclusive a regularidade no SICAF;")
+doc.add_paragraph("j) cumprir as obrigações trabalhistas, sociais, previdenciárias e tributárias, inclusive as previstas em Acordo/Convenção/Dissídio Coletivo;")
+doc.add_paragraph("k) vedar o trabalho de menor de 16 anos (salvo aprendiz a partir de 14) e o trabalho noturno, perigoso ou insalubre de menor de 18 anos;")
+doc.add_paragraph("l) indicar e manter preposto para representá-la durante a execução;")
+doc.add_paragraph("m) arcar com o ônus de eventual equívoco no dimensionamento dos quantitativos de sua proposta, ressalvadas as hipóteses do RLC;")
+doc.add_paragraph("n) obedecer às normas oficiais e às recomendações dos fabricantes, fornecendo materiais, mão de obra qualificada, ferramentas, equipamentos e EPIs;")
+doc.add_paragraph("o) não se prevalecer de erro ou omissão deste Projeto Básico para eximir-se de responsabilidades;")
+doc.add_paragraph("p) garantir aos seus empregados na execução do contrato, política de respeito à diversidade, prevenção a práticas discriminatórias e de alinhamento com os princípios institucionais de equidade de gênero e raça.")
+add_bloco_variante("PB_CessaoDireitos", {
+    "Elaboração de projeto, laudo ou anteprojeto por terceiros": [
+        "Ceder os direitos patrimoniais relativos ao projeto ou serviço técnico especializado, "
+        "para que a Conab possa utilizá-lo, de acordo com o art. 525 do RLC. Quando o projeto "
+        "referir-se a obra imaterial de caráter tecnológico, insuscetível de privilégio, a "
+        "cessão dos direitos incluirá o fornecimento de todos os dados, documentos e elementos "
+        "de informação pertinentes à tecnologia de concepção, desenvolvimento, fixação em "
+        "suporte físico e aplicação da obra.",
+        "Assegurar à Contratante o direito de propriedade intelectual dos produtos "
+        "desenvolvidos, inclusive sobre adequações e atualizações futuras, de forma "
+        "permanente, e os direitos autorais da solução, do projeto, de suas especificações "
+        "técnicas e da documentação produzida, inclusive os produzidos por terceiros "
+        "subcontratados, ficando proibida sua utilização sem autorização expressa da "
+        "Contratante, sob pena de multa, sem prejuízo das sanções civis e penais cabíveis.",
+        "Realizar a transição contratual com transferência de conhecimento, tecnologia e "
+        "técnicas empregadas, sem perda de informações, podendo exigir, inclusive, a "
+        "capacitação dos técnicos da Contratante ou da nova empresa que continuará a "
+        "execução dos serviços, nos termos do art. 17 do RLC.",
+    ],
+    "Execução de obra ou serviço já projetado": [""],
+})
+
+##### fase3_anexos #####
+=== Declaração de Contratos Firmados ===
+[MEDIA] No Projeto Básico, a tabela principal do Anexo VI tem cabeçalhos, número de linhas e rodapé divergentes do modelo oficial (anexo_iv_minuta_de_declaracao_de_contratos_firmados.odt), enquanto a versão equivalente em build_template_tr_servicos.py está correta e serve de referência.
+Area: PB — Anexo VI (Declaração de Contratos Firmados)
+Detalhe: O .odt oficial (tabela 'Tabela51') tem 3 colunas com os rótulos exatos 'Nome do Órgão/Empresa' | 'Vigência do Contrato' | 'Valor Total do Contrato*', seguidas de 10 linhas em branco, e uma linha final onde as colunas 1-2 estão mescladas com o texto 'Valor Total dos Contratos' e a coluna 3 traz 'R$ ____'. Em build_template_pb.py (linhas 973-978), os cabeçalhos foram reescritos como 'Órgão/Empresa (com endereço)' e 'Valor remanescente (R$)*' (texto que não existe no original), apenas 4 linhas em branco são geradas (linhas_vazias=4) em vez de 10, e a linha de total só preenche a célula 0 com 'Valor total dos contratos (R$)', sem célula 'R$' na coluna 3 e sem qualquer mesclagem/indicação visual de total — perdendo o campo de preenchimento do valor total que existe no original. Para comparação, build_template_tr_servicos.py (linhas 848-854) reproduz os cabeçalhos exatos, usa linhas_vazias=10, e preenche linha_total.cells[0]='Valor Total dos Contratos' e cells[2]='R$', batendo com a estrutura oficial.
+Localizacao: templates/build_template_pb.py, linhas 973-978 (bloco 'ANEXO VI - MODELO DE DECLARAÇÃO DE CONTRATOS FIRMADOS')
+Sugestao: tabela_contratos = add_tabela(
+    ["Nome do Órgão/Empresa", "Vigência do Contrato", "Valor Total do Contrato*"],
+    linhas_vazias=10,
+)
+linha_total = tabela_contratos.add_row()
+linha_total.cells[0].text = "Valor Total dos Contratos"
+linha_total.cells[2].text = "R$"
+add_tabela(["Assinatura e Carimbo do Emissor"])
+
+[MEDIA] Falta por completo a tabela 'Assinatura e Carimbo do Emissor' presente no .odt oficial (Tabela53), logo após a tabela de contratos.
+Area: PB — Anexo VI (Declaração de Contratos Firmados)
+Detalhe: No .odt oficial existe uma segunda tabela de uma célula só, com o texto 'Assinatura e Carimbo do Emissor', imediatamente após a tabela de contratos e antes das notas. Em build_template_pb.py essa tabela não é gerada em nenhum ponto do bloco do Anexo VI (linhas 965-988) — o documento pula direto da tabela de contratos para as notas, sem qualquer campo de assinatura/carimbo do emissor da declaração. build_template_tr_servicos.py, linha 855, reproduz essa tabela corretamente com add_tabela(["Assinatura e Carimbo do Emissor"]).
+Localizacao: templates/build_template_pb.py, entre as linhas 976 e 979 (após a criação de tabela_contratos, antes das notas)
+Sugestao: add_tabela(["Assinatura e Carimbo do Emissor"])
+
+[ALTA] As duas fórmulas de verificação do .odt oficial (Tabela3 e Tabela4) não são reproduzidas como conteúdo estruturado — viram apenas um parágrafo em prosa, e o critério da 1ª fórmula é alterado de 'superior a 1' para 'igual ou superior a 1'.
+Area: PB — Anexo VI (Declaração de Contratos Firmados)
+Detalhe: O .odt oficial traz duas tabelas de fórmula com os textos literais: (1) 'Valor do Patrimônio Líquido x 12 > 1 / Valor total dos contratos*' com nota explícita 'Esse resultado deverá ser superior a 1 (um)'; e (2) '(Valor da Receita Bruta - Valor total dos Contratos) x 100 = / Valor da Receita Bruta', antecedida do texto sobre diferença superior a 10% na DRE. Em build_template_pb.py (linhas 983-988) essas duas fórmulas foram substituídas por um único parágrafo de prosa que nem reproduz as tabelas de fórmula nem preserva o critério original: o texto diz 'resultado deve ser igual ou superior a 1 (um)', enquanto o original diz explicitamente 'deverá ser superior a 1 (um)' (>1, sem igualdade) — uma alteração de conteúdo normativo não presente na fonte. build_template_tr_servicos.py (linhas 862-880) reproduz corretamente as duas fórmulas como tabelas 'FÓRMULA DE CÁLCULO' com o texto e o critério '> 1' fiéis ao original.
+Localizacao: templates/build_template_pb.py, linhas 983-988
+Sugestao: doc.add_paragraph(
+    "Fórmula exemplificativa, para fins de atendimento ao disposto no artigo 131, § 6º, "
+    "inciso IV, alíneas a e b, do Regulamento de Licitações e Contratos da Conab.")
+doc.add_paragraph(
+    "1. A Declaração de Compromissos Assumidos deve informar que 1/12 (um doze avos) dos "
+    "contratos firmados pela licitante não é superior ao Patrimônio Líquido da licitante.")
+doc.add_paragraph("FÓRMULA DE CÁLCULO:")
+add_tabela(["Valor do Patrimônio Líquido x 12", "Valor total dos contratos *", "> 1"])
+doc.add_paragraph("Observação:")
+doc.add_paragraph("Nota 1: Esse resultado deverá ser superior a 1 (um).")
+doc.add_paragraph(
+    "Nota 2: Considera-se o valor remanescente do contrato, excluindo o já executado*.")
+doc.add_paragraph(
+    "2. Caso a diferença entre a receita bruta discriminada na Demonstração do Resultado "
+    "do Exercício (DRE) e a declaração apresentada seja maior que 10% (dez por cento) "
+    "positivo ou negativo em relação à receita bruta, o licitante deverá apresentar "
+    "justificativas.")
+doc.add_paragraph("FÓRMULA DE CÁLCULO:")
+add_tabela(["(Valor da Receita Bruta - Valor total dos Contratos) x 100", "Valor da Receita Bruta"])
+
+[MEDIA] O parágrafo de abertura da declaração omite os campos 'inscrição estadual' e 'estabelecida em [endereço]' presentes na frase oficial do .odt.
+Area: PB — Anexo VI (Declaração de Contratos Firmados)
+Detalhe: O .odt oficial abre com: 'Declaro que a empresa [nome], inscrita no CNPJ (MF) n.º ____, inscrição estadual n.º ____, estabelecida em ____, possui os seguintes contratos...'. build_template_pb.py (linhas 970-972) usa apenas 'Declaro que a empresa [RAZÃO SOCIAL], CNPJ nº [ ], possui os seguintes contratos...', sem os campos de inscrição estadual e endereço da empresa declarante. build_template_tr_servicos.py (linhas 844-847) reproduz a frase completa e fiel ao original.
+Localizacao: templates/build_template_pb.py, linhas 970-972
+Sugestao: doc.add_paragraph(
+    "Declaro que a empresa ________________________, inscrita no CNPJ (MF) nº ________, "
+    "inscrição estadual nº _____________, estabelecida em _____________, possui os seguintes "
+    "contratos firmados com a iniciativa privada e a Administração Pública:")
+
+=== Contrato Simplificado ===
+[ALTA] Quatro das 11 cláusulas de "termos e condições" do formulário oficial foram omitidas por completo, apesar de o comentário do código afirmar que o anexo é "transcrito integralmente".
+Area: Anexo V do TR-Dispensa (Minuta de Contrato Simplificado / Anexo XI do RLC)
+Detalhe: O .odt oficial traz 11 cláusulas numeradas de "termos e condições" no verso do Contrato Simplificado. O código em build_template_tr_dispensa.py reproduz apenas 7, renumeradas 1 a 7, e simplesmente pula o conteúdo das cláusulas originais 4, 7, 8 e 9:
+- Cláusula 4 (original): veda que as mercadorias/serviços fornecidos levem marca comercial do Fornecedor sem autorização por escrito — AUSENTE no código.
+- Cláusula 7 (original): nenhum adicional de preço será devido pela Conab a título de frete ou embalagem, salvo convenção expressa por escrito — AUSENTE no código.
+- Cláusula 8 (original): exige que documentos de embarque, conhecimentos de transporte e embalagens tragam o número do Contrato Simplificado e sejam enviados à Conab na data do embarque — AUSENTE no código.
+- Cláusula 9 (original): fixa a data de recebimento dos serviços/mercadorias como termo inicial da forma de pagamento contratada — AUSENTE no código.
+Além disso, o comentário nas linhas 996-997 ("Formulário do Anexo XI do RLC (Contrato Simplificado), transcrito integralmente...") fica factualmente incorreto, pois a transcrição não é integral.
+Localizacao: templates/build_template_tr_dispensa.py, linhas 990-1062 (bloco "ANEXO V - CONTRATO SIMPLIFICADO"), especificamente doc.add_paragraph nas linhas 1035-1061 e o comentário nas linhas 996-997
+Sugestao: Substituir o bloco de cláusulas (linhas 1034-1061) pelo texto completo das 11 cláusulas do .odt oficial, mantendo a numeração original:
+
+doc.add_paragraph("O presente CONTRATO SIMPLIFICADO obedecerá aos seguintes termos e condições:")
+doc.add_paragraph(
+    "1. O Fornecedor deverá acusar, prontamente, o recebimento deste, comprometendo-se, para "
+    "todos os fins, a aceitar os termos e condições do presente Contrato Simplificado e do "
+    "respectivo Termo de Referência ou Projeto Básico.")
+doc.add_paragraph(
+    "2. Concorda o Fornecedor que todas as mercadorias ou serviços especificados no presente "
+    "Contrato Simplificado são de primeira qualidade, por ele garantidas como tais. "
+    "Responsabiliza-se, ainda, pelos vícios e defeitos, visíveis ou ocultos, que desde já são "
+    "considerados redibitórios na forma da lei, obrigando-se, se assim desejar a Conab, a repor "
+    "as mercadorias ou refazer os serviços que não satisfaçam, plenamente, as especificações e "
+    "indicações apresentadas pela Conab, livres de qualquer pagamento ou despesa extra e no prazo "
+    "que lhe for designado.")
+doc.add_paragraph(
+    "3. O Fornecedor assume toda a responsabilidade por qualquer interpelação ou reivindicação "
+    "que venha a ser feita, envolvendo patentes ou direitos autorais, correndo, igualmente, por "
+    "conta do Fornecedor quaisquer pagamentos, multas ou obrigações exigidas por alegados ou "
+    "possíveis titulares desses direitos.")
+doc.add_paragraph(
+    "4. As mercadorias ou serviços a serem fornecidos, segundo desenhos e especificações da "
+    "Conab, não poderão levar marca comercial do Fornecedor por meio de inscrição, gravura ou "
+    "outra qualquer forma de identificação, a não ser que, expressamente e por escrito, seja isso "
+    "convencionado.")
+doc.add_paragraph(
+    "5. A responsabilidade da Conab na execução do presente limita-se e extingue-se ao preço e "
+    "seu pagamento, sendo da exclusiva responsabilidade do Fornecedor todas e quaisquer despesas "
+    "ou ônus, inclusive trabalhistas e de previdência social, não se compreendendo a operação "
+    "realizada através desta como subcontratação, ou subempreitada.")
+doc.add_paragraph(
+    "6. Os serviços serão prestados diretamente à Conab nos locais por ela indicados. A prestação "
+    "coberta pelo presente Contrato Simplificado somente se entende realizada após a verificação "
+    "de que os serviços satisfazem os requisitos, especificações e indicações da Conab. O "
+    "Fornecedor responsabiliza-se pelos serviços realizados e pelas mercadorias que oferece para "
+    "a sua execução, bem como pelos seguros e embalagens, sempre que expressamente e por escrito "
+    "não se convencione o contrário.")
+doc.add_paragraph(
+    "7. Nenhum adicional de preço será devido pela Conab a título de frete ou embalagem, a não "
+    "ser que, expressamente e por escrito, seja convencionado.")
+doc.add_paragraph(
+    "8. Todos os documentos de embarque, conhecimentos de transporte e listas acaso expedidos "
+    "para a execução do serviço deverão conter o número do presente Contrato Simplificado e ser "
+    "enviados à Conab na data do embarque da mercadoria, ou entregues com esta, no que couber. "
+    "Todos os sacos, caixas ou embalagens deverão levar o número do presente Contrato Simplificado "
+    "e o nome do transportador e, sempre que possível, papeletas de material forte, seguramente "
+    "presas aos volumes.")
+doc.add_paragraph(
+    "9. A data do recebimento dos serviços prestados ou das mercadorias pela Conab fixará o termo "
+    "inicial para forma de pagamento que haja sido contratada, salvo quando expressamente "
+    "convencionado de outra forma.")
+doc.add_paragraph(
+    "10. O prazo de entrega deverá ser rigorosamente observado, sob pena de aplicação das "
+    "sanções administrativas previstas no Termo de Referência respectivo.")
+doc.add_paragraph(
+    "11. O pagamento do presente Contrato Simplificado far-se-á via Ordem Bancária ou Ordem de "
+    "Pagamento.")
+
+Também corrigir o comentário nas linhas 996-997 caso, por decisão de negócio, se opte por manter uma versão resumida — nesse caso o comentário não deve afirmar "transcrito integralmente".
+
+[MEDIA] As cláusulas 2 e 6 mantidas no código tiveram conteúdo protetivo suprimido e restringiram o escopo de "mercadorias ou serviços" para apenas "serviços", inconsistente com o restante do próprio anexo.
+Area: Anexo V do TR-Dispensa (Minuta de Contrato Simplificado / Anexo XI do RLC)
+Detalhe: Na cláusula 2, o código remove a expressão "que desde já são considerados redibitórios na forma da lei" e a opção de "repor as mercadorias" (mantém só "refazer os serviços"), reduzindo a garantia legal descrita no formulário oficial. Na cláusula 6 (numerada 5 no código), o código omite a frase final "O Fornecedor responsabiliza-se pelos serviços realizados e pelas mercadorias que oferece para a sua execução, bem como pelos seguros e embalagens, sempre que expressamente e por escrito não se convencione o contrário." Em ambos os casos, e ao longo de todo o bloco de cláusulas, o código substitui sistematicamente "mercadorias ou serviços" por apenas "serviços", embora o próprio cabeçalho da tabela de itens no mesmo anexo (linha 1012, "MATERIAIS/SERVIÇOS") e o parágrafo introdutório (linha 1010, "fornecimento dos materiais/serviços") preservem a referência a materiais — criando inconsistência interna no documento gerado.
+Localizacao: templates/build_template_tr_dispensa.py, linhas 1039-1044 (cláusula 2) e linhas 1054-1057 (cláusula 5/6)
+Sugestao: Aplicada automaticamente pela correção sugerida no achado anterior (substituição integral do bloco de cláusulas 1-11), que já restaura a redação completa de "vícios e defeitos... redibitórios", a opção de repor mercadorias, a menção a seguros e embalagens, e o uso consistente de "mercadorias ou serviços" em todas as cláusulas.
+
+=== Instrumento de Medição de Resultado (IMR) ===
+[MEDIA] Tabela do IMR no TR-Serviços omite a linha 'Indicador Nº ___ – título' e a linha 'Observações' do exemplo preenchido, presentes no .odt oficial.
+Area: templates/build_template_tr_servicos.py — Anexo V (Modelo de IMR)
+Detalhe: O .odt oficial (anexo_xv_instrumento_de_medicao_resultadoodt.odt) tem, para a tabela em branco, uma linha de título 'Indicador' / 'N.º + Título do indicador que será utilizado' antes do cabeçalho Item/Descrição, e a tabela do exemplo preenchido tem uma linha de título 'Exemplo de indicador' / 'N.º 01 – Prazo de atendimento de demandas (OS)', seguida das 10 linhas de item (Finalidade...Observações), sendo a última 'Observações' preenchida com o valor 'RLC'. No código de build_template_tr_servicos.py, a tabela em branco (linha 886-894) não tem nenhuma linha/paragráfo equivalente ao título 'Indicador Nº ___'; e a lista `exemplo_imr` (linhas 900-912) contém apenas 9 tuplas — de 'Finalidade' até 'Sanções' — faltando completamente a linha 'Observações' (chave e valor 'RLC') na tabela de exemplo. O mesmo bug já foi corrigido em build_template_pb.py (task #38 do histórico), que reproduz corretamente ambas as linhas de título e a linha Observações — este arquivo (TR-Serviços) e o TR-Dispensa (achado separado) ficaram para trás dessa correção.
+Localizacao: templates/build_template_tr_servicos.py, linhas 882-916 (bloco '# ANEXO V - MODELO DE INSTRUMENTO DE MEDIÇÃO DE RESULTADO (IMR)')
+Sugestao: # ANEXO V - MODELO DE INSTRUMENTO DE MEDIÇÃO DE RESULTADO (IMR)
+doc.add_page_break()
+add_heading("ANEXO V DO TERMO DE REFERÊNCIA")
+add_heading("MODELO DE INSTRUMENTO DE MEDIÇÃO DE RESULTADO (IMR)")
+
+doc.add_paragraph("Indicador Nº ____ – ____ (título do indicador)")
+tabela_imr = doc.add_table(rows=1, cols=2)
+tabela_imr.style = "Table Grid"
+tabela_imr.rows[0].cells[0].text = "Item"
+tabela_imr.rows[0].cells[1].text = "Descrição"
+for item in ["Finalidade", "Meta a cumprir", "Instrumento de medição", "Forma de acompanhamento",
+             "Periodicidade", "Mecanismo de cálculo", "Início de vigência",
+             "Faixas de ajuste no pagamento", "Sanções", "Observações"]:
+    linha = tabela_imr.add_row()
+    linha.cells[0].text = item
+
+doc.add_paragraph("Exemplo de indicador")
+doc.add_paragraph("Nº 01 – Prazo de atendimento de demandas (OS)")
+tabela_imr_exemplo = doc.add_table(rows=1, cols=2)
+tabela_imr_exemplo.style = "Table Grid"
+tabela_imr_exemplo.rows[0].cells[0].text = "Item"
+tabela_imr_exemplo.rows[0].cells[1].text = "Descrição"
+exemplo_imr = [
+    ("Finalidade", "Garantir um atendimento célere as demandas da Conab."),
+    ("Meta a cumprir", "24 h."),
+    ("Instrumento de medição", "Sistema informatizado de solicitação de serviços – Ordem de Serviços (OS) eletrônica."),
+    ("Forma de acompanhamento", "Pelo sistema."),
+    ("Periodicidade", "Mensal."),
+    ("Mecanismo de cálculo", "Cada OS será verificada e valorada individualmente. N.º de horas no atendimento/24 = X"),
+    ("Início de vigência", "Data da assinatura do contrato."),
+    ("Faixas de ajuste no pagamento",
+     "X até 1 – 100% do valor da OS. De 1 a 1,5 – 90% do valor da OS. De 1,5 a 2 – 80% do valor da OS."),
+    ("Sanções",
+     "20% das OS acima de 2 – multa de XX. 30% das OS acima de 2 – multa de XX + rescisão contratual."),
+    ("Observações", "RLC"),
+]
+for item, descricao in exemplo_imr:
+    linha = tabela_imr_exemplo.add_row()
+    linha.cells[0].text = item
+    linha.cells[1].text = descricao
+
+[MEDIA] Tabela do IMR no TR-Dispensa tem exatamente o mesmo problema do TR-Serviços: falta a linha de título 'Indicador Nº ___' na tabela em branco e falta a linha 'Observações' (com valor 'RLC') na tabela do exemplo preenchido.
+Area: templates/build_template_tr_dispensa.py — Anexo IV (Modelo de IMR)
+Detalhe: Idêntico ao achado do build_template_tr_servicos.py: o código (linhas 954-988) reproduz a tabela em branco sem a linha de título do indicador antes do cabeçalho Item/Descrição, e a lista `exemplo_imr` (linhas 972-984) tem apenas 9 tuplas, terminando em 'Sanções' — sem a linha 'Observações' que no .odt oficial contém o valor 'RLC'. Comparar com build_template_pb.py, que já foi corrigido (task #38) e reproduz fielmente ambas as linhas de título e a linha Observações.
+Localizacao: templates/build_template_tr_dispensa.py, linhas 954-988 (bloco '# ANEXO IV - MODELO DE IMR')
+Sugestao: # ANEXO IV - MODELO DE IMR
+doc.add_page_break()
+add_heading("ANEXO IV DO TERMO DE REFERÊNCIA")
+add_heading("MODELO DE INSTRUMENTO DE MEDIÇÃO DE RESULTADO (IMR)")
+
+doc.add_paragraph("Indicador Nº ____ – ____ (título do indicador)")
+tabela_imr = doc.add_table(rows=1, cols=2)
+tabela_imr.style = "Table Grid"
+tabela_imr.rows[0].cells[0].text = "Item"
+tabela_imr.rows[0].cells[1].text = "Descrição"
+for item in ["Finalidade", "Meta a cumprir", "Instrumento de medição", "Forma de acompanhamento",
+             "Periodicidade", "Mecanismo de cálculo", "Início de vigência",
+             "Faixas de ajuste no pagamento", "Sanções", "Observações"]:
+    linha = tabela_imr.add_row()
+    linha.cells[0].text = item
+
+doc.add_paragraph("Exemplo de indicador")
+doc.add_paragraph("Nº 01 – Prazo de atendimento de demandas (OS)")
+tabela_imr_exemplo = doc.add_table(rows=1, cols=2)
+tabela_imr_exemplo.style = "Table Grid"
+tabela_imr_exemplo.rows[0].cells[0].text = "Item"
+tabela_imr_exemplo.rows[0].cells[1].text = "Descrição"
+exemplo_imr = [
+    ("Finalidade", "Garantir um atendimento célere as demandas da Conab."),
+    ("Meta a cumprir", "24 h."),
+    ("Instrumento de medição", "Sistema informatizado de solicitação de serviços – Ordem de Serviços (OS) eletrônica."),
+    ("Forma de acompanhamento", "Pelo sistema."),
+    ("Periodicidade", "Mensal."),
+    ("Mecanismo de cálculo", "Cada OS será verificada e valorada individualmente. N.º de horas no atendimento/24 = X"),
+    ("Início de vigência", "Data da assinatura do contrato."),
+    ("Faixas de ajuste no pagamento",
+     "X até 1 – 100% do valor da OS. De 1 a 1,5 – 90% do valor da OS. De 1,5 a 2 – 80% do valor da OS."),
+    ("Sanções",
+     "20% das OS acima de 2 – multa de XX. 30% das OS acima de 2 – multa de XX + rescisão contratual."),
+    ("Observações", "RLC"),
+]
+for item, descricao in exemplo_imr:
+    linha = tabela_imr_exemplo.add_row()
+    linha.cells[0].text = item
+    linha.cells[1].text = descricao
+
+=== Matriz de Riscos — Obras/Serviços de Engenharia (Quadro de Inovações) ===
+[MEDIA] A tabela gerada tem apenas 3 linhas em branco para itens adicionais, mas o .odt oficial (Anexo III do RLC) tem 6.
+Area: PB — Anexo II-A (Quadro de Inovações / Matriz de Riscos de Obras e Serviços de Engenharia)
+Detalhe: No arquivo oficial 'anexo_iii_minuta_matriz_riscos_contratacoes_obras_servicos_engenhariaodt.odt', a tabela 'Tabela2' (Frações do objeto x Permissão para inovar) tem 21 linhas no total: 1 de cabeçalho + 14 linhas fixas com as frações padrão (Serviços preliminares ... Meio ambiente e paisagismo) + 6 linhas em branco para a unidade preencher itens adicionais não previstos no rol. Confirmado por contagem programática de '<table:table-row>' dentro do bloco 'Tabela2' = 21 (1+14+6). O código do gerador reproduz corretamente o cabeçalho e as 14 frações na ordem certa, mas chama add_tabela(..., linhas_vazias=3), produzindo só 3 linhas em branco — metade do previsto na minuta oficial.
+Localizacao: templates/build_template_pb.py, função add_tabela() chamada no bloco 'ANEXO II-A' (em torno da linha 878-899), parâmetro linhas_vazias=3 (linha ~898)
+Sugestao: add_tabela(
+    ["Frações do objeto (Obras e serviços de engenharia)",
+     "Permissão para inovar em soluções metodológicas e tecnológicas, desde que "
+     "atento ao que foi delineado no projeto básico. (Sim/Não)"],
+    linhas=[
+        ("Serviços preliminares", ""),
+        ("Terraplanagem", ""),
+        ("Infraestrutura (fundação e laje)", ""),
+        ("Supraestrutura (pilares, vigas e vedações)", ""),
+        ("Cobertura", ""),
+        ("Piso e pavimentação", ""),
+        ("Instalações", ""),
+        ("Equipamentos", ""),
+        ("Esquadrias", ""),
+        ("Revestimentos", ""),
+        ("Sinalização", ""),
+        ("Obras complementares", ""),
+        ("Interferências", ""),
+        ("Meio ambiente e paisagismo", ""),
+    ],
+    linhas_vazias=6,  # corrigido de 3 para 6, conforme o .odt oficial (21 linhas = 1 cabeçalho + 14 fixas + 6 em branco)
+)
+
+##### fase4_consistencia #####
+=== Garantia contratual e Reajuste/Repactuação ===
+[ALTA] A Seção 7 (Garantia Contratual) do TR-Bens omite integralmente o prazo de apresentação, a multa por atraso, a validade de 90 dias e a hipótese de rescisão por atraso na entrega da garantia, elementos que os outros 3 instrumentos trazem e que o art. 439 do RLC aplica genericamente a 'obras, serviços e compras' (portanto também a bens).
+Area: Garantia contratual (art. 439 do RLC) — TR-Bens vs. TR-Serviços/TR-Dispensa/PB
+Detalhe: O art. 439, caput, do RLC dispõe: "Poderá ser exigida prestação de garantia nas contratações de obras, serviços e compras" — ou seja, todo o regramento do artigo (modalidades, limite de 5%/10%, prazo de apresentação, multa por atraso, validade, hipótese de rescisão) é aplicável também a compras/bens, não apenas a serviços. O texto do artigo (parágrafos não numerados após o §5º na extração, mas ainda dentro do art. 439) prevê: "A inobservância do prazo fixado para apresentação da garantia acarretará a aplicação de multa de 0,08% (oito centésimos por cento) do valor do Contrato por dia de atraso, até o máximo de 2% (dois por cento). O atraso superior a 25 (vinte e cinco) dias autoriza a Conab a promover a rescisão do Contrato (...), conforme dispõe o inciso I do Artigo 569 do RLC" e "A prestação de garantia (...) deverá ter validade de 90 (noventa) dias após o término da vigência do contrato".
+
+TR-Serviços (7.1, 7.4), TR-Dispensa (8.1, 8.2) e PB (22.1, 22.3) reproduzem esses elementos: prazo de 10 dias corridos para apresentação, multa de 0,08%/dia até 2%, rescisão após 25 dias de atraso e validade de 90 dias após o término da vigência. Já o TR-Bens (Seção 7, linhas 320-334 de build_template_tr_bens.py) contém apenas: '7.1. A Contratada deverá apresentar comprovante de prestação de garantia, mediante caução em dinheiro, seguro-garantia ou fiança bancária (...)' e o percentual de 5%/10% (art. 439 §§2º-3º) — sem prazo de apresentação, sem multa por atraso, sem validade de 90 dias e sem a hipótese de rescisão por atraso superior a 25 dias.
+
+Essa omissão fica evidenciada também na Seção 15 (Sanções Administrativas) do TR-Bens: a lista de multas pula da letra 'c' diretamente para 'e' (linhas 436-448 do arquivo), sem a letra 'd'. Nos outros 3 instrumentos, exatamente a letra/item nessa posição é a multa moratória por atraso na entrega da garantia contratual — em TR-Serviços: 'd) multa moratória por atraso injustificado na entrega da garantia contratual, conforme item 7.4' (linha 634); em TR-Dispensa: mesmo texto referenciando o item 8.2 (linha correspondente). O TR-Bens não tem essa letra 'd' porque não criou a cláusula correspondente na Seção 7. Além disso, TR-Serviços, TR-Dispensa e PB bookmarkam explicitamente a base de cálculo da garantia ('S07_BaseCalculoGarantia' / 'S08_BaseCalculoGarantia', com nota '(valor do Contrato ou valor anual do Contrato)', refletindo o art. 439, §5º, do RLC, que também abrange 'contratos de compras'); o TR-Bens não tem esse campo.
+
+Não há justificativa pela natureza do objeto: bens/compras estão expressamente incluídos no caput do art. 439 e no §5º, I, do RLC ('valor do contrato, para contratos de compras e serviços...'), de modo que o mesmo regramento de prazo, multa, validade e rescisão deveria constar do TR-Bens.
+Localizacao: templates\build_template_tr_bens.py, linhas 320-334 (Seção 7 — falta prazo/multa/validade/rescisão e base de cálculo) e linhas 436-448 (Seção 15 — sanções pulam da letra 'c' para 'e', sem item de multa por atraso na garantia), comparado com templates\build_template_tr_servicos.py linhas 402-428 (Seção 7) e 634, templates\build_template_tr_dispensa.py linhas 478-504 (Seção 8), e templates\build_template_pb.py linhas 573-596 (Seção 22).
+Sugestao: Adicionar à Seção 7 do TR-Bens: (i) o prazo de 10 (dez) dias corridos, prorrogável por igual período, para apresentação da garantia; (ii) a multa de 0,08% ao dia por atraso, limitada a 2%, com hipótese de rescisão após 25 dias de atraso (art. 569, I, do RLC); (iii) a validade de 90 dias após o término da vigência do contrato; (iv) o campo de base de cálculo da garantia (valor do contrato ou valor anual). Incluir também, na Seção 15 (Sanções), a letra 'd) multa moratória por atraso injustificado na entrega da garantia contratual', remunerando a lacuna hoje existente entre as letras 'c' e 'e'.
+
+[MEDIA] A Seção 20 do PB (Reajustamento/Repactuação) não cita as bases legais 'art. 3º, LXXXIII, e art. 501 do RLC' para a repactuação, nem reproduz a regra de preclusão do direito ao reajuste/repactuação presente em TR-Serviços (12.3) e TR-Dispensa (13.3), embora a mesma regra do RLC seja aplicável a qualquer contrato de serviço contínuo com dedicação exclusiva de mão de obra, hipótese que também pode ocorrer em contratos regidos pelo PB.
+Area: Reajuste/repactuação — PB vs. TR-Serviços/TR-Dispensa
+Detalhe: O RLC define, no rol de definições, 'LXXXIII - Repactuação: espécie de reajustamento contratual utilizada para serviços (...)' e, no art. 501, caput: 'A repactuação de preços, como espécie de reajustamento contratual, deverá ser utilizada (...)'; o mesmo art. 501, em parágrafo específico, prevê que 'Serão objeto de preclusão as repactuações a que o contratado fizer jus (...)' se não solicitadas nos marcos definidos (assinatura de termo aditivo de prorrogação, aniversário do contrato ou encerramento) — regra equivalente à existente para o reajuste comum em outro artigo do RLC ('Serão objeto de preclusão os reajustes a que o contratado fizer jus...').
+
+TR-Serviços (12.1, variante 'Repactuação') cita expressamente: 'Por se tratar de serviço com dedicação exclusiva de mão de obra, o preço consignado no Contrato será objeto de repactuação (art. 3º, LXXXIII, e art. 501 do RLC) (...)' e, em 12.3, reproduz a regra de preclusão nos mesmos termos do RLC. TR-Dispensa replica o mesmo texto em 13.1/13.3. Já o PB, Seção 20 (linhas 539-555 de build_template_pb.py), trata reajuste e repactuação de forma unificada e genérica — '20.1. (...) os preços serão reajustados/repactuados por solicitação da Contratada' — sem citar art. 3º, LXXXIII, nem art. 501 do RLC, e sem qualquer cláusula de preclusão equivalente a 12.3/13.3 dos outros dois instrumentos. O PB também não oferece a distinção condicional (preço fixo / reajuste sem DEMO / repactuação com DEMO) que TR-Serviços e TR-Dispensa modelam via add_bloco_variante, tratando reajuste e repactuação sempre como possíveis simultaneamente, sem gatilho de dedicação exclusiva de mão de obra.
+
+Como o PB cobre obras e serviços de engenharia, que podem ou não envolver dedicação exclusiva de mão de obra continuada, a ausência da citação legal specific e da regra de preclusão não decorre da natureza do objeto (o próprio PB já reconhece a possibilidade de repactuação ao usar a palavra no texto), mas parece uma lacuna de redação.
+Localizacao: templates\build_template_pb.py, linhas 539-555 (Seção 20 — falta citação do art. 3º, LXXXIII, e art. 501 do RLC, e falta cláusula de preclusão), comparado com templates\build_template_tr_servicos.py linhas 565-584 (Seção 12, itens 12.1 variante Repactuação e 12.3) e templates\build_template_tr_dispensa.py linhas 621-640 (Seção 13, itens 13.1 e 13.3).
+Sugestao: Na Seção 20 do PB, quando a repactuação for aplicável (contrato com dedicação exclusiva de mão de obra), citar expressamente 'art. 3º, LXXXIII, e art. 501 do RLC', e acrescentar cláusula de preclusão equivalente à 12.3/13.3 dos TRs, listando os marcos (assinatura de termo aditivo de prorrogação; data em que o contrato completa 12/24 meses etc.; encerramento do contrato) após os quais o direito ao reajuste/repactuação não solicitado preclui.
+
+=== Rescisão e Sanções Administrativas ===
+[MEDIA] TR-Bens omite a multa por atraso na entrega da garantia contratual (item 'd') e o próprio prazo de apresentação da garantia, presentes em TR-Serviços e TR-Dispensa para a mesma regra do RLC.
+Area: TR-Bens — Seção 15 (Sanções) e Seção 7 (Garantia)
+Detalhe: Em templates\build_template_tr_servicos.py (linha 634) e templates\build_template_tr_dispensa.py (linha 689), a Seção 15/16 traz o item 'd) multa moratória por atraso injustificado na entrega da garantia contratual, conforme item 7.4/8.2.', e a Seção 7 desses instrumentos fixa expressamente o prazo de apresentação da garantia ('no prazo de 10 (dez) dias corridos após a assinatura...', linha 407 de build_template_tr_servicos.py) com cláusula 7.4/8.2 dedicada à penalidade pelo atraso. Em templates\build_template_tr_bens.py, a Seção 15 (linhas 422-459) pula diretamente da letra 'c' para a letra 'e' — não existe item 'd' — e a Seção 7 (linhas 320-334) não fixa nenhum prazo para apresentação da garantia nem cláusula equivalente a 7.4. Verifiquei no RLC (rlc.txt, art. 578, inciso III, linha 15086-15090: 'no caso de atraso na entrega da garantia contratual, quando exigida, o instrumento convocatório deverá prever a incidência de multa...') que essa regra é geral e não depende da natureza do objeto — bens também podem exigir garantia contratual (o próprio TR-Bens tem seção 7 com toggle Sim/Não para exigir garantia), então a omissão não é explicada por bens não terem garantia.
+Localizacao: templates\build_template_tr_bens.py (Seção 7, linhas 320-334; Seção 15, linhas 422-459) vs. templates\build_template_tr_servicos.py (linhas 407, 424, 634) e templates\build_template_tr_dispensa.py (linha 689)
+Sugestao: Adicionar em TR-Bens: (i) na Seção 7, o prazo de apresentação da garantia (ex.: 10 dias corridos após a assinatura) e uma cláusula 7.x prevendo a multa por atraso na entrega; (ii) na Seção 15, reincluir a letra 'd) multa moratória por atraso injustificado na entrega da garantia contratual, conforme item 7.x', mantendo a mesma letra/numeração usada nos outros dois TRs.
+
+[ALTA] O corpo do PB (Seção 25) não prevê a multa por não regularização da documentação de habilitação, nem a multa pela recusa em assinar o Contrato, nem cita os arts. 576 a 580 do RLC (condutas ilícitas), todas presentes nos três TRs para a mesma regra.
+Area: PB — Seção 25 (Sanções Administrativas) vs. TR Seção 15/16
+Detalhe: TR-Bens (linhas 422-443), TR-Serviços (linhas 622-633) e TR-Dispensa (linhas 677-688) trazem, como itens a), b) e c) da cláusula de sanções: a) multa por não regularização da documentação de habilitação; b) multa pela prática das condutas elencadas nos arts. 576 a 580 do RLC; c) multa pela recusa em assinar o Contrato. Em templates\build_template_pb.py, a Seção 25 (linhas 619-634) só prevê a) advertência, b) multa moratória, c) multa compensatória, d) multa rescisória e e) suspensão — não há qualquer item sobre habilitação, condutas dos arts. 576-580 ou recusa em assinar. Conferi no RLC (rlc.txt, art. 578, incisos I e II, linhas 15072-15084) que essas duas hipóteses de multa (documentação de habilitação e recusa em assinar) são regras gerais do RLC aplicáveis a qualquer contratação, sem relação com a natureza do objeto (bens x serviços x obras); logo, a omissão no PB não é explicada pela natureza de obras/serviços de engenharia.
+Localizacao: templates\build_template_pb.py, Seção 25 (linhas 617-635) vs. templates\build_template_tr_bens.py (linhas 414-459), build_template_tr_servicos.py (linhas 613-659) e build_template_tr_dispensa.py (linhas 669-719)
+Sugestao: Incluir no PB, Seção 25, itens equivalentes a TR-Bens/Serviços/Dispensa: multa por não regularização da documentação de habilitação (art. 460, §1º c/c art. 578, I, do RLC) e multa pela recusa em assinar o Contrato (art. 578, II, do RLC), além de referência às condutas dos arts. 576 a 580 do RLC.
+
+[ALTA] A minuta de contrato do PB reproduz uma cláusula de sanções muito mais enxuta que a minuta de contrato equivalente do TR-Dispensa, faltando os itens de habilitação, condutas dos arts. 576-580, recusa em assinar e a tabela de graus de infração — mesmo sendo ambas minutas de contrato real, sujeitas ao mesmo RLC.
+Area: PB — Anexo VI (Minuta de Contrato), Cláusula Décima Quinta, vs. Anexo VI de TR-Dispensa
+Detalhe: Em templates\build_template_tr_dispensa.py, o 'ANEXO VI DO TERMO DE REFERÊNCIA — MINUTA DE CONTRATO', Cláusula Décima Quinta (linhas 1213-1277), repete integralmente a cláusula de sanções do corpo do TR: itens a) a j), incluindo habilitação, condutas 576-580, recusa em assinar, multas moratórias escalonadas (e/f), compensatórias parcial/total (g/h), rescisória (i) e a tabela de graus de infração (Tabela 1 e Tabela 2, j). Já em templates\build_template_pb.py, o Anexo VI (Minuta de Contrato), Cláusula Décima Quinta (linhas 1190-1209), traz apenas três itens: a) multa moratória por dia de atraso, b) multa compensatória, c) multa rescisória — sem qualquer menção a documentação de habilitação, condutas dos arts. 576-580 do RLC, recusa em assinar o Contrato ou tabela de graus de infração. Como ambos os documentos (Anexo VI do TR-Dispensa e Anexo VI do PB) são minutas de um contrato administrativo real regido pelo mesmo RLC (art. 578, incisos I a VII, conforme rlc.txt linhas 15072-15114), a disparidade de conteúdo não decorre da natureza do objeto.
+Localizacao: templates\build_template_pb.py, Anexo VI, Cláusula Décima Quinta (linhas 1190-1209) vs. templates\build_template_tr_dispensa.py, Anexo VI, Cláusula Décima Quinta (linhas 1213-1277)
+Sugestao: Alinhar a Cláusula Décima Quinta do Anexo VI do PB à estrutura completa usada no Anexo VI do TR-Dispensa (itens a-j, incluindo habilitação, condutas 576-580, recusa em assinar e tabela de graus de infração), preservando as mesmas variáveis/bookmarks já usadas no PB25 correspondente.
+
+[MEDIA] O mecanismo de multa moratória do PB é um único percentual/dia com limite em % preenchido em branco, sem a estrutura escalonada de dois patamares (0,2% até 15 dias, depois 0,3% até mais 15 dias) usada de forma idêntica nos três TRs para a mesma regra do RLC (art. 578, IV).
+Area: PB — Seção 25 (multa moratória) vs. Seção 15/16 dos três TRs
+Detalhe: TR-Bens (linhas 444-448), TR-Serviços (linhas 635-646) e TR-Dispensa (linhas 690-701) preveem, de forma idêntica, duas faixas de multa moratória: 'e) multa moratória de 0,2%... até o limite de 15 dias' e 'f) multa moratória de 0,3%... por período superior..., até o limite de 15 dias. Esgotado o prazo, poderá ocorrer a não aceitação do objeto, sem prejuízo da rescisão unilateral da avença.' Em templates\build_template_pb.py, a Seção 25 (linhas 621-625) prevê apenas 'b) Multa moratória de ____% ao dia sobre o valor inadimplido, pelo atraso na execução, até o limite de ____%' — um único patamar, sem a estrutura de dois níveis de 15+15 dias nem a consequência de não aceitação do objeto/rescisão unilateral ao se esgotar o prazo. O RLC (rlc.txt, art. 578, IV, linhas 15092-15098) trata a multa de mora como regra geral aplicável a 'demais casos de atraso' independentemente do objeto, de modo que a divergência de estrutura entre PB e os três TRs não é explicada pela natureza obras/serviços de engenharia do PB.
+Localizacao: templates\build_template_pb.py, Seção 25 (linhas 621-625) vs. templates\build_template_tr_bens.py (linhas 444-448), build_template_tr_servicos.py (linhas 635-646) e build_template_tr_dispensa.py (linhas 690-701)
+Sugestao: Padronizar a cláusula de multa moratória do PB com a mesma estrutura escalonada (0,2% até 15 dias / 0,3% até mais 15 dias, com a consequência de não aceitação do objeto e rescisão unilateral) usada nos três TRs, mantendo os campos de valor como variáveis preenchíveis.
+
+[MEDIA] A cláusula de rescisão do corpo do PB resume em um único parágrafo o que nos três TRs é uma cláusula detalhada (tipos de rescisão, condições da rescisão amigável, consequências da rescisão unilateral, formalização e publicação no DOU, conteúdo do termo de rescisão) — apesar de a mesma regra do RLC (arts. 568 a 572) se aplicar igualmente ao PB.
+Area: PB — Seção 32 (Rescisão Contratual) vs. Seção 16/17 dos três TRs
+Detalhe: TR-Bens (linhas 462-498), TR-Serviços (linhas 712-748) e TR-Dispensa (linhas 768-804) trazem, com redação praticamente idêntica: 16.1 (fundamento nos arts. 568-572 do RLC), 16.2 (os três tipos de rescisão: unilateral, amigável, judicial), 16.2.1 (autorização escrita e fundamentada para a amigável), 16.2.2 (vedação à amigável quando há apuração de responsabilidade em curso), 16.2.3 (motivação e contraditório/ampla defesa, arts. 582-593 do RLC), 16.3 (consequências da rescisão unilateral: assunção do objeto, execução da garantia, retenção de créditos), 16.4 (formalização por termo/distrato e publicação no Diário Oficial da União) e 16.5 (conteúdo do termo de rescisão: balanço dos eventos, pagamentos, indenizações e multas). Em templates\build_template_pb.py, a Seção 32 (linhas 718-725) contém apenas um parágrafo genérico: '32.1. A rescisão, total ou parcial, observará as hipóteses e o procedimento do RLC e da Lei nº 13.303/2016, assegurados o contraditório e a ampla defesa, incluindo: inexecução total ou parcial; não apresentação ou recomposição da garantia; falência ou insolvência; perda das condições de habilitação; e razões de interesse público mediante despacho motivado.' — sem citar os artigos específicos do RLC, sem distinguir os três tipos de rescisão, sem tratar a rescisão amigável, e sem descrever as consequências da rescisão unilateral nem a formalização/publicação. Note-se que o próprio Anexo VI (minuta de contrato) do PB, Cláusula Décima Sexta (linha 1213 da mesma leitura), remete de volta aos arts. 568-572 e 582-593 do RLC — os mesmos artigos citados nos TRs — confirmando que a regra de fundo é idêntica; só o nível de detalhamento no corpo do documento diverge.
+Localizacao: templates\build_template_pb.py, Seção 32 (linhas 718-725) vs. templates\build_template_tr_bens.py (linhas 462-498), build_template_tr_servicos.py (linhas 712-748) e build_template_tr_dispensa.py (linhas 768-804)
+Sugestao: Expandir a Seção 32 do PB para reproduzir a mesma estrutura de subitens (tipos de rescisão, condições da rescisão amigável, consequências da rescisão unilateral, formalização/publicação no DOU, conteúdo do termo de rescisão) usada nos três TRs, já que a regra de fundo (arts. 568 a 572 e 582 a 593 do RLC) é a mesma.
+
+=== Dotação orçamentária, Nepotismo e Vinculação ===
+[ALTA] TR-Bens, TR-Serviços e TR-Dispensa nomeiam um ministério específico (MDA) na cláusula de nepotismo, com citação de artigo diferente da usada no PB para a mesma regra do RLC
+Area: Vedação ao nepotismo
+Detalhe: O art. 12 do RLC (confirmado em documentos de referencia\10.901_Regulamento_RLC_30.12.2024_versao4.pdf, texto extraído com pdftotext -layout) veda a contratação de quem tenha 'relação de parentesco, até o terceiro grau civil, com: a) dirigente da Conab; b) empregado da Conab [...]; c) autoridade ministerial a qual a Conab se encontre vinculada' — sem nomear o ministério, exatamente porque a vinculação ministerial da Conab pode mudar. O PB (33.1) reflete essa redação genérica corretamente: 'com autoridade ministerial à qual a Conab se vincule' e cita 'art. 12, §1º, inciso II, do RLC'. Já TR-Bens (17.1), TR-Serviços (17.1) e TR-Dispensa (18.1) usam texto idêntico entre si, mas divergente do RLC e do PB: 'autoridade do Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA)' e citam 'parágrafo único do art. 12 do RLC' (citação de artigo diferente da do PB para a mesma regra). Isso é o mesmo defeito que a memória do projeto registra como corrigido no checklist 'Fix nepotismo clause (Ministério da Agricultura → generic wording)' — a correção aparentemente só foi aplicada ao PB, não às três minutas de TR, caracterizando uma regressão/inconsistência entre os 4 instrumentos para a mesma regra de fundo (art. 12 do RLC), sem qualquer justificativa pela natureza do objeto (bens x serviços x dispensa).
+Localizacao: templates\build_template_tr_bens.py linhas 501-507 ("17. DA VEDAÇÃO AO NEPOTISMO" / "17.1. Conforme disposto no parágrafo único do art. 12 do RLC [...] autoridade do Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA)"); templates\build_template_tr_servicos.py linhas 751-757 (texto idêntico); templates\build_template_tr_dispensa.py linhas 807-813 (texto idêntico); comparar com templates\build_template_pb.py linhas 728-734 ("33.1. [...] com autoridade ministerial à qual a Conab se vincule, nos termos do art. 12, §1º, inciso II, do RLC")
+Sugestao: Padronizar as 4 cláusulas com a mesma redação genérica do RLC/PB, removendo a menção fixa ao MDA (que pode ficar desatualizada se a vinculação ministerial da Conab mudar) e usando a mesma citação de artigo (confirmar junto ao RLC se é 'parágrafo único' ou '§1º, inciso II' e aplicar a mesma citação nos 4 instrumentos).
+
+[MEDIA] PB não exige ND/PTRES/Fonte para os recursos orçamentários, enquanto TR-Bens, TR-Serviços e TR-Dispensa exigem esses campos explícitos para a mesma informação de disponibilidade orçamentária
+Area: Dotação orçamentária
+Detalhe: TR-Bens (1.4), TR-Serviços (1.5) e TR-Dispensa (1.4) têm redação quase idêntica: 'Os recursos orçamentários decorrentes da [aquisição/contratação] do objeto [...] estão consignados no Orçamento da Conab para o ano 20XX, conforme segue: ND: (), PTRES: (), FONTE: ()' — com bookmarks específicos para classificação orçamentária (Natureza de Despesa, PTRES, Fonte). O PB, na cláusula equivalente (30.2, dentro de '30. DO VALOR ESTIMADO DA CONTRATAÇÃO'), só diz: 'Os recursos correrão à conta do Orçamento da União para a Conab, conforme dados orçamentários fornecidos pela área financeira nos autos do processo' — sem pedir ND/PTRES/Fonte. Não encontrei no RLC (art. 128/129, elementos do TR, nem no trecho correspondente do art. 157 relativo ao Projeto Básico) uma exigência explícita de que o PB traga a classificação orçamentária codificada, então esta divergência pode ser deliberada (prática interna da Conab de detalhar ND/PTRES/Fonte apenas nos TRs); reporto como divergência a verificar, não como erro confirmado.
+Localizacao: templates\build_template_tr_bens.py linhas 211-220; templates\build_template_tr_servicos.py linhas 238-242; templates\build_template_tr_dispensa.py linhas 251-255; comparar com templates\build_template_pb.py linha 699 ("30.2. Os recursos correrão à conta do Orçamento da União para a Conab, conforme dados orçamentários fornecidos pela área financeira nos autos do processo.")
+Sugestao: Confirmar com a área de orçamento da Conab se o PB também deve trazer campos de ND/PTRES/Fonte (como os 3 TRs) ou se a prática de deixá-los apenas para os TRs é intencional; se for para padronizar, adicionar os mesmos campos com bookmarks ao PB.

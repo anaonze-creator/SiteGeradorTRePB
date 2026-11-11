@@ -1,0 +1,286 @@
+body { background: #f8f8f8; }
+
+#cabecalho-site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 12px 20px;
+}
+.header-logo { height: 40px; margin-right: 1rem; }
+.header-titulo { font-weight: 600; font-size: 1.1rem; }
+#cabecalho-site .br-header-top { display: flex; align-items: center; }
+.campo-parametro { border-left: 3px solid #1351b4; padding-left: .5rem; margin-bottom: .75rem; }
+
+.ajuda-gatilho {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1351b4;
+  color: #ffffff;
+  font-size: .7rem;
+  font-weight: 700;
+  margin-left: 6px;
+  cursor: help;
+  position: relative;
+  vertical-align: middle;
+}
+.ajuda-gatilho .br-tooltip {
+  bottom: calc(100% + 8px);
+  left: 0;
+  white-space: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  pointer-events: none;
+  /* O core.min.css do gov.br limita o balão a max-width: 240px, estreito
+     demais para os textos de ajuda deste site (frases completas com
+     citações legais) — alargado aqui para reduzir a quebra de linha. */
+  width: max-content;
+  min-width: 260px;
+  max-width: min(420px, 90vw);
+}
+.ajuda-gatilho:hover .br-tooltip,
+.ajuda-gatilho:focus .br-tooltip,
+.ajuda-gatilho:focus-within .br-tooltip {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.aviso-limiar {
+  display: none;
+  margin-top: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  color: #664d03;
+}
+.campo-especificacao { border-left: 3px solid #ffcd07; padding-left: .5rem; margin-bottom: .75rem; }
+.campo-parametro label, .campo-especificacao label {
+  display: block;
+  font-size: .8125rem;
+  margin-bottom: .25rem;
+}
+/* Sem classe .br-input/.br-textarea do gov.br (não aplicada por este site
+   nesses elementos — ver criarCampoInput em js/render.js), input/select/
+   textarea ficam com a largura intrínseca mínima do navegador (~170-210px),
+   bem menor que o espaço disponível no formulário — dificultando conferir
+   o que foi digitado, sobretudo em campos de texto mais longos. */
+.campo-parametro input,
+.campo-parametro select,
+.campo-parametro textarea,
+.campo-especificacao textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.campo-parametro textarea,
+.campo-especificacao textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+}
+[hidden] { display: none !important; }
+
+.cartao-painel {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.cabecalho-painel {
+  padding: 20px 28px;
+  border-bottom: 1px solid #ededed;
+  font-weight: 700;
+  font-size: .9375rem;
+  color: #333333;
+}
+.corpo-painel { padding: 20px 28px; }
+
+.card-secao {
+  background: #f8f8f8;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.card-secao h2 {
+  margin: 0 0 10px;
+  color: #071D41;
+  font-size: .8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.sumario-card {
+  background: #f8f8f8;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.opcoes-pill {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.opcoes-pill .pill {
+  border: 1px solid #C5D4EB;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: .8125rem;
+  color: #1351b4;
+  background: #ffffff;
+  cursor: pointer;
+}
+.opcoes-pill .pill.ativo {
+  background: #1351b4;
+  color: #ffffff;
+  border-color: #1351b4;
+  font-weight: 600;
+}
+
+.barra-progresso-trilho {
+  height: 8px;
+  background: #E6E6E6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.barra-progresso-preenchimento {
+  height: 100%;
+  background: #168821;
+  transition: width .2s;
+  width: 0%;
+}
+.barra-progresso-texto {
+  font-size: .8125rem;
+  color: #333333;
+  margin: 0 0 10px;
+}
+.tabela-linhas-editavel {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+.tabela-linhas-editavel td {
+  padding: 0.25rem;
+}
+.campo-tabela-linhas .br-button.small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.layout-painel-preview {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.layout-painel-preview > div:first-child { flex: 1 1 55%; min-width: 0; }
+.painel-preview {
+  flex: 1 1 45%;
+  min-width: 0;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  position: sticky;
+  top: 20px;
+  background: #ffffff;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: .8125rem;
+  line-height: 1.5;
+}
+.painel-preview table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+.painel-preview td { border: 1px solid #ddd; padding: 4px 6px; }
+mark.preview-destaque {
+  background: #fff3b8;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+@media (max-width: 900px) {
+  .layout-painel-preview { flex-direction: column; }
+  .painel-preview { position: static; max-height: none; width: 100%; }
+}
+
+.hero-triagem {
+  max-width: 720px;
+  margin: 8px auto 32px;
+  text-align: center;
+}
+.hero-triagem h1 {
+  color: #071D41;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin: 0 0 12px;
+}
+.hero-triagem p {
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.grid-instrumentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto 32px;
+}
+.card-instrumento {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  padding: 22px 20px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.card-instrumento:hover,
+.card-instrumento:focus-visible {
+  border-color: #1351b4;
+  box-shadow: 0 6px 18px rgba(19, 81, 180, .14);
+  transform: translateY(-2px);
+}
+.card-instrumento-icone {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #E4ECF7;
+  color: #1351b4;
+  margin-bottom: 6px;
+}
+.card-instrumento-icone svg { width: 22px; height: 22px; }
+.card-instrumento-titulo {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #1351b4;
+}
+.card-instrumento-subtitulo {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #071D41;
+  line-height: 1.3;
+}
+.card-instrumento-desc {
+  font-size: .8125rem;
+  color: #777777;
+}

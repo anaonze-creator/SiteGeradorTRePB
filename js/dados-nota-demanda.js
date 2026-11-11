@@ -1,0 +1,88 @@
+export const SECOES_NOTA_DEMANDA = [
+  { id: "01", titulo: "NECESSIDADE DE CONTRATAÇÃO", campos: [
+    { id: "ND01_Necessidade", tipo: "especificacao", input: "textarea",
+      pergunta: "Qual é a situação-problema que originou a necessidade desta contratação, e quais os impactos para a Conab?",
+      ajuda: "Art. 108, §1º, I, e art. 115, I, do RLC: a justificativa da necessidade deve ser fornecida pela área interessada na contratação, por ser quem melhor conhece o problema. Explique a situação-problema e seus impactos para a Conab." },
+  ]},
+  { id: "02", titulo: "REFERÊNCIA A OUTROS INSTRUMENTOS DE PLANEJAMENTO DA COMPANHIA", campos: [
+    { id: "ND02_ReferenciaPlanejamento", tipo: "especificacao", input: "textarea",
+      pergunta: "A contratação está alinhada a algum instrumento de planejamento da Conab (Plano de Desenvolvimento Institucional, Planejamento Estratégico) ou política pública?",
+      ajuda: "Art. 108, §1º, II, do RLC: indique se a contratação está alinhada aos planos instituídos, e a política pública a que esteja vinculada, quando couber." },
+  ]},
+  { id: "03", titulo: "REQUISITOS DA CONTRATAÇÃO", campos: [
+    { id: "ND03_Requisitos", tipo: "especificacao", input: "textarea",
+      pergunta: "Quais os requisitos necessários ao atendimento da necessidade (incluindo critérios de sustentabilidade, vigência pretendida do Contrato e eventual necessidade de transição contratual)?",
+      ajuda: "Art. 108, §1º, III, e art. 110, §3º, do RLC: elenque os requisitos necessários, critérios de sustentabilidade quando couber, e a duração pretendida do Contrato (limite de 5 anos para prestação de serviços), justificando a escolha. Quando aplicável, indique também a necessidade de a contratada promover transição contratual com transferência de conhecimento, tecnologia e técnicas empregadas (art. 110, §3º, IV)." },
+  ]},
+  { id: "04", titulo: "ESTIMATIVA DAS QUANTIDADES, ACOMPANHADAS DAS MEMÓRIAS DE CÁLCULO E DOS DOCUMENTOS QUE LHE DÃO SUPORTE", campos: [
+    { id: "ND04_EstimativaQuantidades", tipo: "especificacao", input: "textarea",
+      pergunta: "Descreva o método usado para estimar as quantidades do objeto, com a data prevista de execução.",
+      ajuda: "Art. 108, §1º, IV, e art. 115, V, do RLC: defina e documente o método para a estimativa das quantidades, utilizando informações de contratações anteriores quando houver, e inclua a data prevista de execução do objeto." },
+  ]},
+  { id: "05", titulo: "LEVANTAMENTO DE MERCADO E JUSTIFICATIVA DE ESCOLHA DO TIPO DE SOLUÇÃO A CONTRATAR", campos: [
+    { id: "ND05_LevantamentoMercado", tipo: "especificacao", input: "textarea",
+      pergunta: "Qual solução foi identificada como a que melhor atende à contratação, e por quê?",
+      ajuda: "Art. 108, §1º, V, e art. 115, II, do RLC: considere diferentes fontes (contratações similares de outros órgãos, pesquisas e estudos do setor) para justificar a escolha da solução." },
+  ]},
+  { id: "06", titulo: "ESTIMATIVAS DE PREÇOS OU PREÇOS REFERENCIAIS", campos: [
+    { id: "ND06_EstimativaPrecos", tipo: "especificacao", input: "textarea",
+      pergunta: "Qual metodologia foi usada para estimar o preço de referência?",
+      ajuda: "Art. 108, §1º, VI, do RLC: utilize preferencialmente preços referenciais divulgados por órgãos públicos, justificando a escolha do método, e inclua nos autos a memória de cálculo." },
+  ]},
+  { id: "07", titulo: "DESCRIÇÃO DA SOLUÇÃO COMO UM TODO", campos: [
+    { id: "ND07_DescricaoSolucao", tipo: "especificacao", input: "textarea",
+      pergunta: "Descreva a solução como um todo: os elementos que devem ser produzidos, contratados ou executados.",
+      ajuda: "Art. 108, §1º, VII, e art. 115, IV, do RLC: apresente todos os elementos que devem ser produzidos, contratados ou executados para que a contratação produza os resultados esperados, com definição precisa e suficiente do objeto." },
+  ]},
+  { id: "08", titulo: "JUSTIFICATIVAS PARA O PARCELAMENTO OU NÃO DA SOLUÇÃO", campos: [
+    { id: "ND08_Parcelamento", tipo: "parametro", input: "select",
+      pergunta: "A solução será parcelada (licitada por item)?",
+      opcoes: ["Sim", "Não"], blocoTexto: true, padrao: "Não",
+      ajuda: "Art. 108, §1º, VIII, do RLC: o parcelamento é a regra quando o objeto é divisível, desde que não haja prejuízo ao conjunto da solução ou perda de economia de escala." },
+    { id: "ND08_Justificativa", tipo: "especificacao", input: "textarea",
+      pergunta: "Justifique a decisão de parcelar ou não a solução" },
+  ]},
+  { id: "09", titulo: "DEMONSTRATIVO DOS RESULTADOS PRETENDIDOS", campos: [
+    { id: "ND09_ResultadosPretendidos", tipo: "especificacao", input: "textarea",
+      pergunta: "Quais os benefícios/resultados pretendidos com a contratação, e a quem se destinam?",
+      ajuda: "Art. 108, §1º, IX, e art. 115, VI, do RLC: declare os benefícios diretos e indiretos em termos de economicidade, eficácia, eficiência e melhor aproveitamento dos recursos disponíveis." },
+  ]},
+  { id: "10", titulo: "PROVIDÊNCIAS PARA ADEQUAÇÃO DO AMBIENTE DA CONAB", campos: [
+    { id: "ND10_AdequacaoAmbiente", tipo: "parametro", input: "select",
+      pergunta: "Há necessidade de adequação do ambiente da Conab para a execução da contratação?",
+      opcoes: ["Sim", "Não"], blocoTexto: true, padrao: "Não",
+      ajuda: "Art. 108, §1º, X, do RLC: elabore cronograma das atividades necessárias e considere a capacitação de empregados, quando aplicável." },
+    { id: "ND10_DetalheAdequacao", tipo: "especificacao", input: "textarea",
+      pergunta: "Descreva as adequações necessárias",
+      mostrarSe: { ND10_AdequacaoAmbiente: "Sim" } },
+  ]},
+  { id: "11", titulo: "CONTRATAÇÕES CORRELATAS OU INTERDEPENDENTES", campos: [
+    { id: "ND11_ContratacoesCorrelatas", tipo: "parametro", input: "select",
+      pergunta: "Há contratos correlatos ou interdependentes a esta contratação?",
+      opcoes: ["Sim", "Não"], blocoTexto: true, padrao: "Não" },
+    { id: "ND11_DetalheCorrelatas", tipo: "especificacao", input: "textarea",
+      pergunta: "Liste os contratos correlatos ou interdependentes",
+      mostrarSe: { ND11_ContratacoesCorrelatas: "Sim" } },
+  ]},
+  { id: "12", titulo: "DECLARAÇÃO DA VIABILIDADE OU NÃO DA CONTRATAÇÃO", campos: [
+    { id: "ND12_Viabilidade", tipo: "parametro", input: "select",
+      pergunta: "A contratação é viável?",
+      opcoes: ["Viável", "Inviável"], blocoTexto: true, padrao: "Viável",
+      ajuda: "Art. 108, §1º, XII, do RLC: a declaração deve ser justificada com base nos elementos averiguados nos itens anteriores dos Estudos Preliminares." },
+    { id: "ND12_Justificativa", tipo: "especificacao", input: "textarea",
+      pergunta: "Justifique a declaração de viabilidade" },
+  ]},
+  { id: "13", titulo: "IDENTIFICAÇÃO DA MODALIDADE DE LICITAÇÃO OU DE CONTRATAÇÃO DIRETA", campos: [
+    { id: "ND13_Modalidade", tipo: "parametro", input: "select",
+      pergunta: "Qual modalidade de licitação (ou contratação direta) será utilizada?",
+      opcoes: ["Pregão Eletrônico", "Competição Pública", "Dispensa de Licitação", "Inexigibilidade de Licitação"],
+      ajuda: "Art. 115, III, do RLC: identifique a modalidade e justifique sua adoção." },
+    { id: "ND13_Justificativa", tipo: "especificacao", input: "textarea",
+      pergunta: "Justifique a escolha da modalidade" },
+  ]},
+  { id: "14", titulo: "DISPOSIÇÕES FINAIS", campos: [
+    { id: "ND14_Responsaveis", tipo: "especificacao", input: "textarea",
+      pergunta: "Nome e cargo/função de todos os empregados que participaram da elaboração desta Nota de Demanda, um por linha",
+      ajuda: "Art. 115, VII, do RLC: a Nota de Demanda deve conter a assinatura de todos os empregados que participaram de sua elaboração, não apenas de um responsável." },
+  ]},
+];
